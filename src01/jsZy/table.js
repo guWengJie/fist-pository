@@ -1,0 +1,9 @@
+require.config({
+	baseUrl:"/HBuilderProject/ES6/src01/jsZy/js",
+	paths:{
+		aa:"aa"
+	}
+})
+require(["aa"],function(a){
+	a.say()
+})

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+	</head>
+	<body>
+		<table class="table table-striped" >
+			<tr>
+				<td><input type="text" id="userID" placeholder="请输入用户ID"/></td>
+				<td><input type="text" id="userName" placeholder="请输入用户名"/></td>
+				<td><input type="text" id="userAge" placeholder="请输入用户年龄"/></td>
+				<td><input type="text" id="userAdd" placeholder="请输入用户地址"/></td>
+				<td><a href="#" class="btn btn-success" id="add">添加</a></td>
+			</tr>
+		</table>
+		<hr>
+		<fieldset id="">
+			<legend>会员信息表</legend>
+			
+		</fieldset>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script src="../js/easy.templatejs.js"></script>
+<script src="../js/sea.js"></script>
+<script type="text/template" id="table">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td><strong>ID</strong></td>
+				<td><strong>姓名</strong></td>
+				<td><strong>年龄</strong></td>
+				<td><strong>地址</strong></td>
+				<td><strong>操作</strong></td>
+			</tr>
+		</thead>
+		<tbody>
+			%{for(var i=0;i<list.length ;i++){}%
+				<tr>
+					<td>{=list[i].userID}</td>
+					<td>{=list[i].userName}</td>
+					<td>{=list[i].userAge}</td>
+					<td>{=list[i].userAdd}</td>
+					<td><a href="#" class="btn btn-danger" id="{=list[i].userID}">删除</a></td>
+				</tr>
+			%{}}%
+		</tbody>
+	</table>
+</script>
+<script>
+	seajs.use("../jsTable/show.js");
+</script>
