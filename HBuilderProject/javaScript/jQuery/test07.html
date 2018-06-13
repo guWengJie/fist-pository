@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<h1>今天中毒了</h1>
+			<h1>今天中毒了</h1>
+			<h3>今天中毒了</h3>
+			<h1>今天中毒了</h1>
+			<h1>今天中毒了</h1>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	$(function(){
+		$("h1").wrapInner($("<div/>"))
+//		$("h1").wrapAll($("<div/>"))
+		/*$("h1").click(function(){
+			if($("h1").parent().is("div")){
+				$("h1").unwrap()
+			}else{
+				console.log(111)
+			}
+		})*/
+//		$("h1").wrap($("<div/>").html("<h1>asdf</h1>"))
+		//同辈关系
+//		$("div").after($("<h3/>").text("还好吧！还好吧！"))
+//		$("div").before($("<h3/>").text("还好吧！"))
+//		$("<h3/>").text("还好吧！").insertAfter($("div"))
+//		$("<h3/>").text("还好吧！还好吧！").insertBefore($("div"))
+		//父子关系
+//		$("<h3/>").text("还好吧！").appendTo($("div"))
+//		$("<h3/>").text("还好吧！还好吧！").prependTo($("div"))
+//		$("div").append($("<h3>").text("还好吧！"))
+
+//		$("div").prepend($("<h3>").text("还好吧！还好吧！"))
+	})
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#can{
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can" width="500" height="400"></canvas>
+	</body>
+</html>
+<script>
+	var canvas=document.getElementById("can");
+	var can=canvas.getContext("2d");
+	var jb=can.createLinearGradient(20,0,150,0);
+		jb.addColorStop(0.2,"black")
+		jb.addColorStop(0.5,"blue")
+		jb.addColorStop(0.9,"yellow")
+		can.fillStyle="green";
+		can.fillStyle=jb;
+		can.fillRect(20,20,150,100);
+/*		阴影
+ 		can.shadowBlur=90;
+		can.shadowColor="yellow";
+		can.shadowOffsetX=100;
+		can.shadowOffsetY=100;
+		can.fillStyle="green";
+		can.fillRect(110,110,150,150);*/
+		
+/*	五角心	
+ * can.strokeStyle="#008000";
+		can.fillStyle="yellow";
+		can.lineWidth="5";
+		can.moveTo(250,0);
+		can.lineTo(0,400);
+		can.lineTo(500,150);
+		can.lineTo(0,150);
+		can.lineTo(500,400);
+		can.lineTo(250,0);
+		can.fill();*/
+		can.stroke();
+</script>

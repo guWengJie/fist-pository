@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<title></title>
+	</head>
+	<body>
+		<form role="form" class="form-horizontal">
+			<fieldset>
+				<legend>信息注册</legend>
+				<div class="row form-group has-error">
+					<div class="col-xs-3">
+						<label for="userName" class="control-label">账号</label>
+					</div>
+					<div class="col-xs-9">
+						<input type="text" name="userName" id="userName" class="form-control"/>
+					</div>
+				</div>
+				<div class="row form-group has-success">
+					<div class="col-xs-3">
+						<label for="userPwd" class="control-label">密码</label>
+						
+					</div>
+					<div class="col-xs-9">
+							<input type="password" name="userPwd" id="userPwd" class="form-control input-sm"/>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-3">
+						<label for="userFile" class="control-label">文件</label>
+						
+					</div>
+					<div class="col-xs-9">
+							<input type="file" name="userFile" id="userFile" />
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-3">
+						<label for="userFile" class="control-label">选择</label>
+					</div>
+					<div class="col-xs-9">
+						<select class="form-control">
+							<option>计算机</option>
+							<option>网页设计</option>
+							<option>自动化</option>
+						</select>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-3">
+						<label for="userHob" class="control-label">爱好</label>
+					</div>
+					<div class="col-xs-9">
+						<label class="checkbox-inline col-xs-3">
+					        <input type="checkbox" id="inlineCheckbox1" value="option1"> 选项 1
+					    </label>
+					    <label class="checkbox-inline col-xs-4">
+					        <input type="checkbox" id="inlineCheckbox2" value="option2"> 选项 2
+					    </label>
+					    <label class="checkbox-inline col-xs-4">
+					        <input type="checkbox" id="inlineCheckbox3" value="option3"> 选项 3
+					    </label>
+					</div>
+				</div>
+				
+				<div class="row form-group">
+					<div class="col-xs-3">
+						<label for="userHob" class="control-label">性别</label>
+					</div>
+					<div class="col-xs-9">
+						<label class="radio-inline col-xs-3">
+					        <input type="radio" id="radio1" value="option1">男
+					    </label>
+					    <label class="radio-inline col-xs-4">
+					        <input type="radio" id="radio2" value="option2">女
+					    </label>
+					    <label class="radio-inline col-xs-4">
+					        <input type="radio" id="radio3" value="option3">保密
+					    </label>
+					</div>
+				</div>
+				
+				<div class="row form-group">
+					<div class="col-xs-3">
+						<label for="userHob" class="control-label">协议</label>
+					</div>
+					<div class="col-xs-9">
+						 <textarea class="form-control" rows="3"></textarea>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-3">
+						<label for="userHob" class="control-label">操作</label>
+					</div>
+					<div class="col-xs-9 btn-group" style="text-align: center;">
+						    <button type="reset" class="btn btn-success col-xs-4">重置</button>
+						    <button type="button" class="btn btn-default col-xs-4">按钮 2</button>
+						    <button type="submit" class="btn btn-warning col-xs-4">提交</button>
+					</div>
+				</div>
+				
+			</fieldset>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	var form=new FormData();
+		form.append("userName","gwj");
+		form.append("userPass","asdfs");
+	
+	var xhr=new XMLHttpRequest();
+		xhr.open("POST","form.jsp");
+	var upload=xhr.upload;
+		upload.onabort=function(){console.log("上传终止")}
+		
+		xhr.send(form);
+</script>

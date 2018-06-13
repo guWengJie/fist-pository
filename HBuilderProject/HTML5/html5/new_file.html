@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="move">
+		<div class="box">
+			<div class="list"><a href="#"><img src="../王者/head/1525146334.jpg"/></a></div>
+			<div class="list"><a href="#"><img src="../王者/head/1525230513.jpg"/></a></div>
+			<div class="list"><a href="#"><img src="../王者/head/1525233873.jpg"/></a></div>
+			<div class="list"><a href="#"><img src="../王者/head/1525252773.jpg"/></a></div>
+			<div class="list"><a href="#"><img src="../王者/head/1525229504.jpg"/></a></div>
+		</div>
+		<ul>
+			<li class="aaaa">峡谷秘密大曝光</li>
+			<li>开黑节阵容推荐</li>
+			<li>和五月天打CALL</li>
+			<li>五月天独家专访</li>
+			<li>肉坦之王牛魔</li>
+		</ul>
+	</div>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	
+$(function(){
+
+	$(".move>ul>li").mouseenter(function(){
+		$(".list").eq($(this).index()).stop().show().siblings().stop().hide();
+	})
+	var cnt=0;
+	setInterval(function(){
+		cnt++;
+		if(cnt==5){
+			cnt=0;
+		}
+		$(".list").eq(cnt).show().siblings().hide();
+	},3000)
+	})
+</script>

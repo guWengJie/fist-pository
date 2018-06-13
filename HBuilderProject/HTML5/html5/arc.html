@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#can{
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can" width="500" height="400">
+			<img src="../img/head02.jpg" id="image"/>
+		</canvas>
+	</body>
+</html>
+<script>
+	var canvas=document.getElementById("can");
+	var ctx=canvas.getContext("2d"); 
+	var img=document.getElementById("image");
+	ctx.strokeStyle="blue";
+	
+	
+/*	设置或返回文本内容的当前对齐方式
+ * ctx.moveTo(150,20);
+	ctx.lineTo(150,170);
+	ctx.stroke();
+	
+	ctx.font="15px Arial";
+	
+	// 显示不同的 textAlign 值
+	ctx.textAlign="start";
+	ctx.fillText("textAlign=start",150,60);
+	ctx.textAlign="end";
+	ctx.fillText("textAlign=end",150,80);
+	ctx.textAlign="left";
+	ctx.fillText("textAlign=left",150,100);
+	ctx.textAlign="center";
+	ctx.fillText("textAlign=center",150,120);
+	ctx.textAlign="right";
+	ctx.fillText("textAlign=right",150,140);*/
+	
+	
+		/*ctx.beginPath();
+//		ctx.globalAlpha=0.2;//透明度
+//		向画布上绘制图像、画布或视频
+		img.onload=function(){
+			ctx.drawImage(img,0,0);//在画布上定位图像：
+			ctx.drawImage(img,0,0,250,400);//在画布上定位图像，并规定图像的宽度和高度：
+			ctx.drawImage(img,0,0,250,400,200,100,200,200);//剪切图像，并在画布上定位被剪切的部分：
+		}*/
+
+	/* 字体
+	 * ctx.font="40px 楷体";
+		ctx.strokeText("Hello World",100,150);
+		ctx.fillText("Hello World",100,150);
+		ctx.fillText("width:"+ctx.measureText(ctx).width,200,250)
+*/
+		
+/*		平移	
+		ctx.rotate(45*Math.PI/180);
+		ctx.translate(100,-300)
+		ctx.fillRect(200,200,100,50);*/
+/*		旋转
+		ctx.rotate(45*Math.PI/180);
+		ctx.fillRect(200,200,100,50);*/
+/*		缩放
+ * 		ctx.strokeRect(80,80,125,115);
+		ctx.scale(2,2);
+		ctx.strokeRect(80,80,125,115);*/
+/*		圆
+		ctx.arc(200,200,100,0,2*Math.PI);
+		ctx.stroke();*/
+		
+		ctx.closePath()
+		
+</script>
+

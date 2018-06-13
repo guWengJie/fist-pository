@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<a href="#"></a>
+			<p></p>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	$(function(){
+		var arr;
+		$.ajax({
+			type:"get",
+			url:"../json/img.json",
+			async:true,
+			success:function(vc){
+				vc.forEach(function(i){
+					$("<img/>").attr("src",i.imgUrl).appendTo("a");
+				})
+			}
+		});
+	})
+</script>

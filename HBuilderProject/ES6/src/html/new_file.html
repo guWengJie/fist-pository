@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div{
+				position: relative;
+				width: 100px;
+				height: 100px;
+				background: red;
+				left: 0;
+				border-radius:100% ;
+			}
+		</style>
+	</head><body>
+		<div></div>
+	</body>
+</html>
+<script>
+	let [ball,browser,pos,on,step]=[
+	    document.querySelector("div"),
+	    {
+		"browserWidth":window.innerWidth,
+		"browserHeight":window.innerHeight
+		},
+		{
+			"Xpos":0,
+			"Ypos":0
+		},
+		{
+			"Xon":0,
+			"Yon":0
+		},
+		 50
+	    ];
+     let Ball={
+     	 ball,
+     	 browser,
+     	 pos,
+     	 on,
+     	 step,
+     	 moveX(){
+ 	   	    this.ball.style.left=this.pos.Xpos+"px";
+		 	  if(this.on.Xon==0){
+		 	  	this.pos.Xpos+=this.step;
+		 	  }else{
+		 	  	  this.pos.Xpos-=this.step;
+		 	  }
+		 	  if(this.pos.Xpos+this.ball.offsetWidth>this.browser.browserWidth){
+		 	  	    this.on.Xon=1;
+		 	  	    this.pos.Xpos=this.browser.browserWidth-this.ball.offsetWidth;
+		 	  }
+		 	  if(this.pos.Xpos<0){
+		 	  	   this.on.Xon=0;
+		 	  	   this.pos.Xpos=0;
+		 	  }
+		 	  
+		 	  this.ball.style.top=this.pos.Ypos+"px";
+		 	  if(this.on.Yon==0){
+		 	  	this.pos.Ypos+=this.step;
+		 	  }else{
+		 	  	  this.pos.Ypos-=this.step;
+		 	  }
+		 	  if(this.pos.Ypos+this.ball.offsetWidth>this.browser.browserHeight){
+		 	  	    this.on.Yon=1;
+		 	  	    this.pos.Ypos=this.browser.browserHeight-this.ball.offsetWidth;
+		 	  }
+		 	  if(this.pos.Ypos<0){
+		 	  	   this.on.Yon=0;
+		 	  	   this.pos.Ypos=0;
+		 	  }
+     	 }
+     	 
+     }
+     
+     setInterval(()=>{
+     	  Ball.moveX();
+     },100)
+
+</script>

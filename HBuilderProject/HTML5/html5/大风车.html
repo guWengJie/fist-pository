@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#can{ 
+				-webkit-animation:mm 2s linear infinite;
+            }
+            @keyframes mm{
+            	0%{
+            		-webkit-transform:rotateZ(360deg);
+            	}
+            }
+            div:nth-of-type(1){
+            	width:400px;
+            	height:400px;
+				background:transparent;
+				margin: auto;
+				margin-top:100px;
+            }
+             div:nth-of-type(2){
+            	width:20px;
+            	height:600px;
+            	background:pink;
+				margin: auto;
+				margin-top:-200px;
+            }
+		</style>
+	</head>
+	<body>
+		<div>
+			<canvas id="can" width="400" height="400"></canvas>
+		</div>
+     	
+     	<div></div>
+	</body>
+</html>
+<script>
+    var can = document.querySelector("#can").getContext("2d");
+		can.beginPath();
+		can.moveTo(0,0);
+		can.fillStyle="red";
+		can.bezierCurveTo(400,0,0,400,400,400);
+		can.fill();
+		can.closePath();
+		
+		can.beginPath();
+		can.moveTo(0,400);
+		can.fillStyle="blue";
+		can.bezierCurveTo(0,0,400,400,400,0);
+		can.fill();
+		can.closePath();
+  
+</script>

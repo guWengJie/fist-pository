@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#can{ 
+				background:black;
+            }
+		</style>
+	</head>
+	<body>
+     	<canvas id="can" width="800" height="800"></canvas>
+	</body>
+</html>
+<script>
+    function solarSystem(){
+    	this.canvas = document.querySelector("#can").getContext("2d");
+    }
+    solarSystem.prototype.drawCirlceRaliway=function(){
+    	for(var i=0;i<9; i++){
+    		this.canvas.beginPath();
+    		this.canvas.strokeStyle="white";
+    		this.canvas.arc(400,400,i*44,0,Math.PI*2);
+    		this.canvas.stroke();
+    		this.canvas.closePath()
+    	}
+    }
+    var time=10;
+    solarSystem.prototype.drawCirlceBall=function(x,r,sColor,eColor,tt){
+    	this.canvas.save();
+    	this.canvas.beginPath();
+    	this.canvas.translate(400,400);
+    	this.canvas.rotate(time*360/tt);
+    	var grad=this.canvas.createRadialGradient(x,0,0,x,0,r);
+    		grad.addColorStop(0,sColor);
+    		grad.addColorStop(1,eColor);
+    	this.canvas.fillStyle=grad;
+    	this.canvas.arc(x,0,r,0,Math.PI*2);
+    	this.canvas.fill();
+    	this.canvas.closePath();
+    	this.canvas.restore()
+    	time++;
+    }
+    
+    
+    var solSys=new solarSystem();
+//  	solSys.drawCirlceRaliway();
+	requestAnimationFrame(function(){
+		solSys.canvas.clearRect(0,0,800,800);
+		solSys.drawCirlceRaliway();
+   		solSys.drawCirlceBall(44,10,"blue","red",30000);
+		solSys.drawCirlceBall(88,13,"#123","456",40000);
+		solSys.drawCirlceBall(132,17,"#789","987",50000);
+		solSys.drawCirlceBall(176,19,"yellow","red",60000);
+		solSys.drawCirlceBall(220,23,"#ff0","#00f",70000);
+		solSys.drawCirlceBall(264,27,"#f0f","#0ff",80000);
+		solSys.drawCirlceBall(308,30,"#f0f","green",90000);
+		solSys.drawCirlceBall(352,33,"gray","pink",100000);
+		requestAnimationFrame(arguments.callee);
+	})
+    
+	/*setInterval(function(){
+		ctx.clearRect(0,0,800,400);
+		ctx.save();
+		ctx.lineWidth="10";
+		var dat=new Date();
+		var ti=dat.getSeconds()+1;
+	    ctx.beginPath();
+	    ctx.strokeStyle="red";
+	    ctx.arc(200,200,100,0,deg(ti*6));
+		ctx.stroke();
+		ctx.closePath();
+	},1000)*/
+    
+    
+
+
+</script>

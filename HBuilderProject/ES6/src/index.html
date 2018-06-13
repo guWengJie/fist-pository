@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+</html>
+<script>
+	
+	
+	
+	var arr=[10,20,30];
+	var arr01=[...arr];
+		arr01.push(100);
+		console.log(arr);
+		console.log(arr01);
+	function fun(x,y,z){
+		return x+y+z;
+	}
+	console.log(fun(...arr))
+/*	class text{
+		constructor(){
+			this.userName="guwenjie"
+		}
+		say(){
+			console.log(this.userName)
+		}
+	}
+	var te=new text();
+		te.say();*/
+	
+//	var arr=[1,2,3,4,65,6,7,8,1,2,3,4,5,6,7,8,9]
+//	var mm=new Set(arr);
+//	console.log(Array.from(mm));
+//		mm.add("userName");
+//		mm.add("userName01");
+//		mm.add("userName02");
+//		mm.add("userName03");
+//	console.log(mm);
+//	console.log(mm.delete("userName03"))
+//	console.log(mm.forEach(function(keys,values){
+//		console.log(keys,values);
+//	}))
+//	console.log(mm.has("userName"))
+//	console.log(mm.keys())
+//	console.log(mm.values())
+//	console.log(mm.size)
+	
+//	var nn=new Map();
+//		nn.set("userName","guWenJie");
+//		nn.set("userName01","zhujunyao");
+//		nn.set("userName02","zhengjiasheng");
+//		nn.set("userName03","wangtao");
+//	console.log(nn)
+//	console.log(nn.delete("userName03"))
+//	console.log(nn.forEach(function(keys,values){
+//		console.log(keys,values);
+//	}))
+//	console.log(nn.has("userName"))
+//	console.log(nn.keys())
+//	console.log(nn.values())
+//	console.log(nn.size)
+	
+/*	var obj={}
+	var key1="age";
+	var key2=Symbol("age");
+	obj[key1]=18;
+	obj[key2]=800;
+	console.log(obj.age);
+	console.log(obj[key2]);
+	
+	let arr=[10,20,30,40,50]
+	
+	for( i in arr){
+		console.log(arr[i]);
+	}
+	console.log(Object.keys(arr));
+	console.log(Object.getOwnPropertyNames(arr))
+	let a=new Object();
+	let b=new Object();
+	console.log(Object.is(a,b))//faless
+	
+	let [usName,usAge,usSex]=["guWenJie",19,"男"];
+	let user={
+		usName,usAge,usSex,
+		intro(){
+			console.log(this.usName);
+		},
+		get getUsName(){
+			return usName;
+		},
+		set setUsName(name){
+			this.usName=name;
+		}
+	}
+	user.setUsName="zjt";
+	user.intro();
+	console.log(user.getUsName);
+
+
+
+	let day="我";
+	let tam="爸爸";
+	var res=tag`是一${tam}个非${day}常好的!真的!`;
+	function tag(a,b,c){
+		console.log(a)
+		console.log(b)
+		console.log(c)
+		return c+a[0]+a[1]+a[2]+a[3]+b;
+	}
+	console.log(res)
+	
+	*/
+	
+/*	var user={
+		"userNAme":"guWenJie",
+		"userAge":19,
+		"userSex":"boy"
+	}
+	let html=`<ul>
+				<li>${user.userNAme}</ii>	
+				<li>${user.userAge}</ii>	
+				<li>${user.userSex}</ii>	
+			</ul>`;
+	document.querySelector("body").innerHTML=html;
+	
+	var str="heool wored";
+	console.log(str.includes("he"));//true*/
+	
+	
+/*	var arr=[];
+	for (let i=0;i<10;i++) {
+		arr[i]=function(){
+			console.log(i);
+		}
+	}
+	arr[0]();//0
+	arr[1]();//1
+	var a=10;
+	{
+		 a=20;
+	}
+	console.log(a);//20
+	
+	var a=10;
+	{
+		var a=20;
+	}
+	console.log(a);//20
+	
+	let a=10;
+	{
+		let a=20;
+	}
+	console.log(a);//10
+	let a=10;
+	{
+		a=20;
+	}
+	console.log(a);//20*/
+</script>

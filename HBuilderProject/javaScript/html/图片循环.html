@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				position: relative;
+				transform-style:preserve-3d;
+				transition: all 2s linear; 
+				width:400px;
+				height:200px;
+				margin:100px auto;
+				background:blue;
+			}
+			#box>div{
+				width:400px;
+				height:200px;
+				border: 2px solid red;	
+				position: absolute;			
+			}
+			#box:hover{
+				transform: rotateX(60deg);
+			}
+			input{
+				 height:20px;
+				 width:250px;
+			}
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			
+			ul{
+				margin: 100px auto;
+				width:300px;
+				height:50px;
+				background:red;
+				text-align: center;
+			}
+			ul>li{
+				width:100px;
+				float:left;
+				height:50px;
+				list-style-type:none;
+				color:#fff;
+				line-height:50px;
+				background: blue;
+			}
+			ul>li>ol{				
+				width:100px;
+				height:300px;
+				display:none;
+			}
+			ul>li>ol>li{		
+				width:100px;
+				float:left;
+				height:50px;
+				list-style-type:none;
+				line-height:50px;
+				background: gray;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--  3D旋转
+		<div id="box">			
+		</div>
+		
+		  表格提交-->
+			<form action="#" >				
+			<table border="1" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100" align="right">姓名：</td>
+					<td><input type="text" value="" name="userName"/></td>
+					<td width="160" id="us" style="font-size:12px;color:red;"></td>
+				</tr>
+				<tr>
+					<td align="right">密码：</td>
+					<td><input type="text" value="" name="userPass"/></td>
+					<td id="pa" style="font-size:12px;color:red;"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><input type="submit" id="sub" style="width: 60px;margin-left:200px;" /></td>
+				</tr>
+			</table>
+		</form>
+		
+		<!--<ul>
+			<li id="li1">aaa
+				<ol id="id1">
+					<li>1111</li>
+					<li>2222</li>
+					<li>3333</li>
+				</ol>
+			</li>
+			<li id="li2">bbb
+				<ol>
+					<li>4444</li>
+					<li>5555</li>
+					<li>6666</li>
+				</ol>
+			</li>
+			<li id="li3">ccc
+				<ol>
+					<li>7777</li>
+					<li>8888</li>
+					<li>9999</li>
+				</ol>
+			</li>
+		</ul>
+		-->
+		
+	</body>
+</html>
+<script>
+//	var index=1;
+//	document.getElementById("li1").onclick=function(){
+//		if (index==1) {
+//			document.getElementById("id1").style.display="block";
+//		}
+//		if(index>1){
+//			index=1;
+//		}
+//
+//	}
+	
+
+
+	
+/* 表单提交*/
+ 	var gwj={
+		"userName":/^[A-Z]\w{6}$/,
+		"userPass":/^\d{6}$/,
+		"funName":function(name){
+			if(this.userName.test(name)){
+				return name;
+			}else{
+				return "用户名要首母大写（7位数）";
+			}
+		},
+		"funPass":function(pass){
+			if(this.userPass.test(pass)){
+				return 1;
+			}else{
+				return "密码要6位数字";
+			}
+		}
+	}
+	var inp=document.getElementsByTagName("input");	
+	
+	inp[0].onmouseout=function(){
+		if(gwj.funName(inp[0].value)==1){
+			document.getElementById("us").innerText="ok";
+		}else{
+			document.getElementById("us").innerText="*"+gwj.funName(inp[0].value);					
+		}
+	}
+	inp[0].onmouseover=function(){
+		document.getElementById("us").innerText="";
+	}
+	inp[1].onmouseout=function(){
+		if(gwj.funPass(inp[1].value)==inp[1].value){
+			document.getElementById("pa").innerText="ok";
+		}else{
+			document.getElementById("pa").innerText="*"+gwj.funPass(inp[1].value);					
+		}
+	}
+	inp[1].onmouseover=function(){
+		document.getElementById("pa").innerText="";
+	}
+	document.getElementById("sub").onclick=function(){	
+		if(document.getElementById("pa").innerText=="ok" && document.getElementById("us").innerText=="ok" ){
+			alert("提交ok");
+		}else{
+			alert("提交no");
+		}
+	}
+	
+	/*document.getElementById("sub").onclick=function(){
+		for(var i=0;i<inp.length;i++){
+			if(gwj.funName(inp[0].value)==inp[0].value){
+				if(gwj.funPass(inp[1].value)==inp[1].value){
+					alert("提交ok");
+					break;
+				}else{
+					document.getElementById("pa").innerText="*"+gwj.funPass(inp[i].value);
+					document.getElementById("us").innerText=null;					
+					break;
+				}
+			}else{
+				alert(gwj.funName(inp[i].value))
+				document.getElementById("us").innerText="*"+gwj.funName(inp[i].value);
+				break;
+			}
+		}
+	}*/
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+/*    3D旋转
+ * for (var i=0;i<6;i++) {
+		var div=document.createElement("div");	
+			div.style.transform="rotateY("+(i*60)+"deg) translatez(350px)"
+			document.getElementById("box").appendChild(div);
+			div.style.backgroundImage="url(../img/img"+i+".jpg)";
+	}
+	var index=0;
+	document.getElementById("box").onclick=function(){
+		index++;
+		this.style.transform="rotateY("+(index*60)+"deg)";
+	}*/
+</script>

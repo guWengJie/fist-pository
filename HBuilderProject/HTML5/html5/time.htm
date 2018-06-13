@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#can{ 
+				background:gold;
+            }
+		</style>
+	</head>
+	<body>
+     	<canvas id="can" width="400" height="400"></canvas>
+     	<audio src="../img/123.mp4" controls="controls" id="aud" loop="loop"></audio>
+	</body>
+</html>
+<script>
+	var canvas = document.querySelector("#can");
+	var aud = document.querySelector("#aud");
+	if(aud.paused){
+		
+	}
+    var ctx=canvas.getContext("2d");
+    function deg(num){
+    	return num*Math.PI/180;
+    }
+	setInterval(function(){
+		ctx.save();
+		ctx.clearRect(0,0,800,400);
+	    ctx.beginPath();
+		ctx.lineWidth="10";
+		var dat=new Date();
+		var ti=dat.getSeconds()+1;
+	    ctx.strokeStyle="red";
+	    ctx.arc(200,200,100,0,deg(ti*6));
+	    ctx.stroke();
+	    ctx.closePath();
+		
+		
+	    ctx.beginPath();
+	    ctx.lineWidth="20";
+ 		var min=dat.getMinutes();
+	    ctx.strokeStyle="blue";
+	    ctx.arc(200,200,140,0,deg(min*6));
+		ctx.stroke();
+		ctx.closePath();
+		
+	    ctx.beginPath();
+		ctx.lineWidth="30";
+		var hou=dat.getHours();
+	    ctx.strokeStyle="deeppink";
+	    ctx.arc(200,200,180,0,deg(hou*15));
+		ctx.stroke();
+		ctx.closePath();
+		
+	    ctx.beginPath();
+	    ctx.font="30px 楷体";
+	    ctx.fillText(hou+":"+min+":"+ti,150,200);
+		ctx.stroke();
+		ctx.closePath();
+	},1000)
+    
+    
+/*    	ctx.save();//方法保存当前图像状态的一份拷贝。
+		ctx.rotate(45*Math.PI/180);
+		ctx.font="40px 楷体";
+		ctx.fillText("Hello World",100,100);
+		ctx.stroke();//方法绘制当前路径。
+		ctx.rotate(-45*Math.PI/180);
+		ctx.font="10px 楷体";
+		ctx.fillText("Hello body",100,150);*/
+
+
+</script>

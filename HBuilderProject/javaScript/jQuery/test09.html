@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			ul{
+				width: 1000px;
+				height:250px;
+				overflow: hidden;
+				position: relative;
+			}
+			ul>li{
+				width: 200px;
+				height:250px;
+				list-style: none;
+				float: left;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	$(function(){
+		for (var i=0;i<$("li").length;i++) {
+			$("li").eq(i).css("background-image","url(../img/"+i+".jpg)")
+		}	
+		
+			$("li").mouseenter(function(){
+				$(this).stop().animate({
+					"width":600
+				}).siblings().stop().animate({
+					"width":100
+				})
+			})
+			$("li").mouseleave(function(){
+				$(this).stop().animate({
+					"width":200
+				})
+			})
+	})
+</script>

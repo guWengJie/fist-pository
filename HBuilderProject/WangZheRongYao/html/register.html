@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/register.css" />
+		<script src="../js/jquery-1.4.js"></script>
+		<script src="../js/rigister.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="dhe5">
+				<div class="bo1">
+					<ul>
+						<li><img class="im" src="../img/rigister/01-1.jpg" /></li>
+						<li><img class="im" src="../img/rigister/01-4.jpg" /></li>
+						<li><img class="im" src="../img/rigister/01-3.jpg" /></li>
+					</ul>	
+					<div>QQ</div>
+				</div>
+				<div class="bo3">
+					<ul>
+						<li><a href="#">QQ靓号</a></li>
+						<li><a href="#">邮箱帐号</a></li>
+						<li>
+							<select name="sel01" class="sel01">
+								<option value="lag02" class="op"><a href="#">简体中文</a></option>
+								<option value="lag02" class="op"><a href="#">繁體中文</a></option>
+								<option value="lag03" class="op"><a href="#">English</a></option>
+								<img src="../img/rigister/down.png" alt="" />
+							</select>
+						</li>
+						<li><a href="#">意见反馈</a></li>
+					</ul>
+				</div>
+				<div class="bo2">
+					<h1>注册用户</h1><br/>
+					<span class="spn">账号可以使用手机或者邮箱注册，但是仔细核对后，填入正确信息。</span><br/>
+					<form action="#" method="post">
+						<input type="text" name="user" id="user1" placeholder=" 昵称"/><br/><br/>
+						<input type="password" name="pass" id="pass1" placeholder="密码"/><br/><br/>
+						<select class="sel02" name="sel">
+							<option value="+86">中国 +86</option>
+							<option value="中国香港特别行政区 +852">中国香港特别行政区 +852</option>
+							<option value="中国澳门特别行政区 +853">中国澳门特别行政区 +853</option>
+							<option value="中国台湾地区 +886">中国台湾地区 +886</option>
+						</select><input type="password" name="pass2" id="pass2" placeholder=" 手机号码"/>
+						<p>可通过该手机号找回密码</p>
+							<!--<input type="tel" id="tel" name="tel" placeholder="手机号码"/>
+							<button id="getNum">获取验证码</button><input color="red" id="getNum01" disabled="disabled"><br><br>
+							<input type="text" id="yzm" name="yzm" placeholder="验证码"/>
+							<button id="checkNum">校验</button><input color="red" id="checkNum01" disabled="disabled"><br><br>-->
+					</form>
+					<table style="margin:auto;">
+						<tr>
+							<td><input type="tel" id="tel" name="tel" placeholder="手机号码"/></td>
+							<td><button id="getNum">获取验证码</button></td>
+							<td color="red" id="getNum01"></td>
+						</tr>
+						<tr><td></td></tr>
+						<tr>
+							<td width="150px"><input type="text" id="yzm" name="yzm" placeholder="验证码" /></td>
+							<td><button id="checkNum">校验</button></td>
+							<td color="red" id="checkNum01"></td>
+						</tr>
+					</table>
+					<input type="submit" value="立即注册" id="sub"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var gwj={
+		"userName":/^[A-Z]\w{6}$/,
+		"userPass":/^\d{11}$/,
+		"funName":function(name){
+			if(this.userName.test(name)){
+				alert("Ok");
+			}else{
+				alert("用户名要首母大写（7位数）")
+			}
+		},
+		"funPass":function(pass){
+			if(this.userPass.test(pass)){
+				alert("Ok");
+			}else{
+				alert("密码要11位数字")
+			}
+		}
+		}
+		
+		var btnObj=document.querySelector("#getNum");
+	      $(btnObj).click(function(){
+	      	var tel=$("#tel").val();//text()
+	      	  console.log(tel)
+		      	btnObj.disabled=true;
+		      	var num=60;
+		      	var timer=setInterval(function(){
+		      		var This=btnObj
+		      		  This.innerText=num+"s"
+		      		   num--;
+		      		   if(num==0){
+		      		   	clearInterval(timer);
+		      		   	    This.innerText="获取验证码"
+		      		   	    btnObj.disabled=false;
+		      		   }
+		      	},1000);
+	//			      	  url:地址，接口
+	    var url = "http://120.237.120.246:6777/stu_sms/basicFrameWork!sendAuthCode.action";
+		var data = {"telephone" : tel};
+	      	$.post(url,data,function(data){
+	      		if(tel){
+	      			
+	      		}
+	      		    console.log(data);
+	      		    $("#getNum01").text(data.codeDesc);
+	      	})
+	      })
+	      
+	      $("#checkNum").click(function(){
+	      	    var yzm=$("#yzm").val();
+	      	    var tel=$("#tel").val();
+	      	    var url = "http://120.237.120.246:6777/stu_sms/basicFrameWork!authCode.action";
+		    var data = {"telephone" : tel,"authCode":yzm};
+		      	$.post(url,data,function(data){
+		      		    if(data.code==0){
+		      		    	$("#checkNum01").text(data.codeDesc);
+		      		    }else{
+		      		    	$("#checkNum01").text(data.codeDesc);
+		      		    	var se=setInterval(function(){
+		      		    		$("#checkNum01").text("");
+			      		    	},1000)
+			      		    }
+			      	})
+		      })
+	})
+</script>

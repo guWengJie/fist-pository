@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script src="../js/sea.js"></script>
+<script>
+	seajs.use(["../js/A.js","../js/B.js"],function(a,b){
+		a.say();
+		b.say();
+	})
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#can{ 
+				background:#8aca04;
+            }
+		</style>
+	</head>
+	<body>
+     	<canvas id="can" width="650" height="400"></canvas>
+	</body>
+</html>
+<script>
+	var canvas = document.querySelector("#can");
+    var ctx=canvas.getContext("2d");
+  	var img=document.createElement("img");	
+   		img.src="../img/horse.jpg";
+   		img.onload=function(){
+   			var i=0;
+			setInterval(function(){
+				ctx.clearRect(0,0,800,400)
+				ctx.drawImage(img,i*126,0,126,400,i*126,0,120,400)
+				i++;
+				if(i==5){
+					i=0;
+				}
+			},600)
+   		}
+    
+    
+    
+/*    	ctx.save();//方法保存当前图像状态的一份拷贝。
+		ctx.rotate(45*Math.PI/180);
+		ctx.font="40px 楷体";
+		ctx.fillText("Hello World",100,100);
+		ctx.stroke();//方法绘制当前路径。
+		ctx.rotate(-45*Math.PI/180);
+		ctx.font="10px 楷体";
+		ctx.fillText("Hello body",100,150);*/
+
+
+</script>

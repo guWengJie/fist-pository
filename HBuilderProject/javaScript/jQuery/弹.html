@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		div{
+			width:1000px;
+			height: 800px;
+			margin: 0 auto;
+		}
+		#box{
+			width:1000px;
+			height: 800px;
+			border:1px solid red;
+			position: relative;
+		}
+		#box>.circle{
+			width: 30px;
+			height:30px;
+			border-radius:50%;
+			background:blue;
+			top:770px;
+			position: absolute;
+		}
+		#box>.dang{
+			width: 300px;
+			height:30px;
+			border-radius:30px;
+			background:green;
+			bottom:0;
+			position: absolute;
+		}
+	</style>
+	<body>
+		<div>
+			<div id="box">
+				<div class="dang"></div>
+				<div class="circle"></div>
+			</div>
+			<button class="bu1">开始</button>
+			<button class="bu2">重新开始</button>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script type="text/javascript">
+	$(function(){	
+		var dang=$(".dang");
+		var qiuTime=null,$BANg;
+		var cnt=1,Xda=1;
+		function games(){
+			this.ball=$(".circle");
+			this.box=$("#box");
+			this.Xon=1;
+			this.Xpos=0;
+			this.Yon=1;
+			this.Ypos=750;
+			this.speed=10;
+		}
+		
+		games.prototype.move=function(){
+			this.ball.css("left",this.Xpos);
+			if(this.Xon==1){
+				this.Xpos+=this.speed;
+			}else{
+				this.Xpos-=this.speed;
+			}
+			if(this.Xpos+this.ball.width()>this.box.width()){
+				this.Xon=0;
+				this.Xpos=this.box.width()-this.ball.width();
+			}
+			if(this.Xpos<0){
+				this.Xon=1; 
+				this.Xpos=0;
+			}
+			this.ball.css("top",this.Ypos);
+			if(this.Yon==1){
+				this.Ypos+=this.speed;
+				if(Xda<this.Xpos && dang.width()+Xda>this.Xpos+this.ball.width()){
+					if(this.Ypos+this.ball.height()+dang.height()>this.box.height()){
+						this.Yon=0;
+						this.Ypos=this.box.height()-dang.height()-this.ball.height();
+					}
+				}
+				
+				
+			}else{
+				this.Ypos-=this.speed;
+			}
+			//游戏结束
+			if(this.Ypos+this.ball.height()>this.box.height()){
+				this.Yon=1;
+				this.Ypos=this.box.height()-this.ball.height();
+				clearInterval(qiuTime);
+				dang.remove();
+			}
+			if(this.Ypos<0){
+				this.Yon=1; 
+				this.Ypos=0;
+			}
+		}
+		var ball=new games();
+	
+		$(".bu1").click(function(){
+			if(cnt==1){
+				//开始
+				$(".bu1").text("暂停")
+				qiuTime=setInterval(function(){
+					ball.move();
+				},20)
+				
+				///挡板
+				$(window).keydown(function(e){
+					if(e.keyCode==39){
+						Xda+=30;
+						if(dang.width()+Xda>ball.box.width()){
+							Xda=ball.box.width()-dang.width();
+						}
+					}else if(e.keyCode==37){
+						Xda-=30;
+						if(Xda<0){
+							Xda=0;
+						}
+					}
+					dang.css("left",Xda)
+					
+				})
+				cnt--;
+			}else{
+				$(".bu1").text("开始")
+				clearInterval(qiuTime);
+				cnt++;
+			}
+			
+		})
+		//结束
+		$(".bu2").click(function(){
+			
+			$(".bu1").text("开始");
+			alert("游戏结束")
+			clearInterval(qiuTime);
+			setInterval(function(){
+			  	location="弹.html";
+			},1000)
+		})
+		
+	})
+</script>

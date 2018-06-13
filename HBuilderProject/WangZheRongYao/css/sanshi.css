@@ -1,0 +1,117 @@
+#box .head .beijin{width:100%;height:960px;position: relative;top:-140px;background: url(../王者/head/kv-small-171227.jpg);background-size: 100% 960px;}
+#box .head .ulli{width:100%;height:200px;position: absolute;top:806px;background:url(../nav.png);background-size:100% 200px;}
+#box .head .ulli>ul{width:1900px;height:200px;margin:auto;list-style:none;background:transparent;}
+#box .head .ulli>ul>li{width:250px;height:140px;background:transparent;float:left;text-align:center;font-size:30px;padding-top:60px;font-weight: 800;}
+#box .head .ulli>ul>li:hover{cursor: pointer;}
+#box .head .ulli>ul>li>a{display:block;width:250px;height:140px;color:whitesmoke;text-decoration:none;}
+#box .head .ulli>ul>li>a>span{font-size:15px;}
+#box .head .ulli>ul .sss{background:url(../王者/rrrr.png);margin-left: 200px;color:gold;}
+#zhiBo{width:100%;height:630px;background:black;margin-top:-140px;border:1px solid transparent;overflow:hidden;}
+#zhiBo>div:nth-of-type(1){color:white;width:1700px;margin:auto;height:70px;font-weight:800;background:url(../hd.png) no-repeat;font-size:50px;margin-top:50px;background-position: center;padding-right:80px;text-align: center;}
+#zhiBo>div:nth-of-type(2){width:100px;margin-left:10px;font-size:30px;background: transparent;margin-top:-80px;margin-left:950px;color:white;}
+#zhiBo>div:nth-of-type(2)>span{font-size:15px;padding-top: -30px;color:white;}
+#zhiBo>div:nth-of-type(3){width:1500px;height:500px;background: transparent;margin: auto;}
+#zhiBo>div:nth-of-type(3)>div{width:750px;height:500px;background:transparent;margin-top:20px;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(1){width:900px;height:480px;background:transparent;float:left;margin:20px;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(1)>img{width:900px;height:480px;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2){width:490px;height:480px;background:#1b1b27;float:left;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(1){width:100px;height:55px;background:#1b1b27;margin:20px;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(1)>a{float:left;display: block;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(1)>span{width:40px;height:55px;display: block;float: left;padding-top:15px;padding-left:5px;font-size:20px;color:gold;font-weight: 800px;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(2){width:460px;height:380px;background:#1b1b27;margin:20px;color:gold;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(2)>input{width:400px;height:40px;background:#282732;margin-left:20px;margin-top:5px;border:1px solid gray;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(2) #inp{width:300px;height:40px;float:left;border:1px solid gold;margin-top:30px;}
+#zhiBo>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(2) #sub01{width:90px;height:40px;background:gold;color:white;margin-left:5px;float:left;border:1px solid gold;margin-top:30px;}
+
+
+#saiCheng{width:100%;height:630px;background:#1b1827;border:1px solid transparent;overflow:hidden;}
+#saiCheng>div:nth-of-type(1){color:white;width:1700px;margin:auto;height:70px;font-weight:800;background:url(../hd.png) no-repeat;font-size:50px;margin-top:60px;background-position: center;padding-right:80px;text-align: center;}
+#saiCheng>div:nth-of-type(2){width:100px;margin-left:10px;font-size:30px;background: transparent;margin-top:-80px;margin-left:950px;color:white;}
+#saiCheng>div:nth-of-type(2)>span{font-size:15px;padding-top: -30px;color:white;}
+#saiCheng .sanJiUl{width: 1500px;height:460px;background:#1b1827;margin: auto;margin-top:20px;}
+#saiCheng .sanJiUl>ul{width: 1500px;height:50px;list-style: none;}
+#saiCheng .sanJiUl>ul>li{width:500px;height:47px;background:transparent;float:left;line-height:50px;font-size: 20px;text-align: center;color:white;}
+#saiCheng .sanJiUl>ul>li:hover{cursor: pointer;}
+#saiCheng .sanJiUl>ul .sanShiLi{color:gold;border-bottom:3px solid gold;}
+#saiCheng .sanJiUl>ul>li:hover{color:gold;cursor: pointer;}
+#saiCheng .sanJiUl>.saiJi{width:1500px;height:400px;background:#1b1827;}
+#saiCheng .sanJiUl>.saiJi>div{width:1500px;height:400px;background:#1b1827;position:absolute;display: none;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(3){display:block;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(1)>ul{width:1500px;height:50px;list-style:none;margin-top:20px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(1)>ul>li{width:120px;height:50px;background:url(../赛事中心/kuang.jpg);float:left;text-align: center;line-height:50px;color:white;margin-left:28px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(1)>ul>li:hover{cursor: pointer;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(1)>ul .abc{background:url(../赛事中心/asd.png);background-size:120px 50px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(1) .acce{width:1400px;height:280px;background:#1b1827;margin-left:50px;float:left;margin-top:30px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(1) .acce>div{width:1400px;height:280px;background:#1b1827;position: absolute;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(2)>ul{width:1500px;height:50px;list-style:none;margin-top:20px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(2)>ul>li{width:120px;height:50px;background:url(../赛事中心/kuang.jpg);float:left;text-align: center;line-height:50px;color:white;margin-left:28px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(2)>ul>li:hover{cursor: pointer;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(2)>ul .abc{background:url(../赛事中心/asd.png);background-size:120px 50px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(2) .acce{width:1400px;height:280px;background:#1b1827;margin-left:50px;float:left;margin-top:30px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(2) .acce>div{width:1400px;height:280px;background:#1b1827;position: absolute;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(3)>ul{width:1500px;height:50px;list-style:none;margin-top:20px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(3)>ul>li{width:120px;height:50px;background:url(../赛事中心/kuang.jpg);float:left;text-align: center;line-height:50px;color:white;margin-left:28px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(3)>ul>li:hover{cursor: pointer;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(3)>ul .abc{background:url(../赛事中心/asd.png);background-size:120px 50px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(3) .acce{width:1400px;height:280px;background:#1b1827;margin-left:50px;float:left;margin-top:30px;}
+#saiCheng .sanJiUl>.saiJi>div:nth-of-type(3) .acce>div{width:1400px;height:280px;background:#1b1827;position: absolute;}
+#foot{width:100%;height:836px;background:#1b1827;}
+#foot>div{width:1700px;height:836px;background:url(../赛事中心/20180515153702.jpg);margin: auto;}
+
+#janShuo{width:100%;height:600px;background:#1b1827;border:1px solid transparent;overflow:hidden;}
+#janShuo>div:nth-of-type(1){color:white;width:1700px;margin:auto;height:70px;font-weight:800;background:url(../hd.png) no-repeat;font-size:50px;margin-top:60px;background-position: center;padding-right:80px;text-align: center;}
+#janShuo>div:nth-of-type(2){width:300px;margin-left:10px;font-size:30px;background: transparent;margin-top:-80px;margin-left:950px;color:white;}
+#janShuo>div:nth-of-type(2)>span{font-size:15px;padding-top: -30px;color:white;}
+#janShuo .jie{width:800px;height:400px;background:background:#1b1827;;margin-top:20px;margin: auto;}
+#janShuo .jie>ul{width:800px;height:60px;background:transparent;list-style: none;}
+#janShuo .jie>ul>li{width:396px;height:60px;background:url(../赛事中心/xie02.jpg);float:left;text-align: center;line-height: 60px;border: 2px solid #F3C258;}
+#janShuo .jie>ul>li:hover{cursor: pointer;}
+#janShuo .jie>ul>li:nth-of-type(1){background:url(../赛事中心/xie.jpg);float:left;text-align: center;line-height: 60px;}
+#janShuo .jie>ul .xie{background:url(../赛事中心/xie.png);}
+#janShuo .jie .jieACC{width:800px;height:400px;background:#1b1827;}
+#janShuo .jie .jieACC>div{width:800px;height:400px;position:absolute;background:#1b1827;display:none;}
+#janShuo .jie .jieACC>div:nth-of-type(1){display:block;}
+#janShuo .jie .jieACC>div:nth-of-type(1)>ul{width:800px;height:50px;list-style:none;margin-top:20px;}
+#janShuo .jie .jieACC>div:nth-of-type(1)>ul>li{width:220px;height:50px;background:url(../赛事中心/kuang.jpg);background-size:220px 50px;float:left;text-align: center;line-height:50px;color:white;margin-left:28px;}
+#janShuo .jie .jieACC>div:nth-of-type(1)>ul>li:hover{cursor: pointer;}
+#janShuo .jie .jieACC>div:nth-of-type(1)>ul .abc{background:url(../赛事中心/asd.png);background-size:220px 50px;}
+#janShuo .jie .jieACC>div:nth-of-type(1) .acce{width:700px;height:280px;background:#1b1827;margin:30px;}
+#janShuo .jie .jieACC>div:nth-of-type(1) .acce>div{width:700px;height:280px;background:#1b1827;position: absolute;}
+#janShuo .jie .jieACC>div:nth-of-type(2)>ul{width:800px;height:50px;list-style:none;margin-top:20px;}
+#janShuo .jie .jieACC>div:nth-of-type(2)>ul>li{width:220px;height:50px;background:url(../赛事中心/kuang.jpg);background-size:220px 50px;float:left;text-align: center;line-height:50px;color:white;margin-left:28px;}
+#janShuo .jie .jieACC>div:nth-of-type(2)>ul>li:hover{cursor: pointer;}
+#janShuo .jie .jieACC>div:nth-of-type(2)>ul .abc{background:url(../赛事中心/asd.png);background-size:220px 50px;}
+#janShuo .jie .jieACC>div:nth-of-type(2) .acce{width:700px;height:280px;background:#1b1827;margin:30px;}
+#janShuo .jie .jieACC>div:nth-of-type(2) .acce>div{width:700px;height:280px;background:#1b1827;position: absolute;}
+
+
+#gouPiao{width:100%;height:600px;background:#1b1827;border:1px solid transparent;overflow:hidden;}
+#gouPiao>div:nth-of-type(1){color:white;width:1700px;margin:auto;height:70px;font-weight:800;background:url(../hd.png) no-repeat;font-size:50px;margin-top:60px;background-position: center;padding-right:80px;text-align: center;}
+#gouPiao>div:nth-of-type(2){width:300px;margin-left:10px;font-size:30px;background: transparent;margin-top:-80px;margin-left:950px;color:white;}
+#gouPiao>div:nth-of-type(2)>span{font-size:15px;padding-top: -30px;color:white;}
+#gouPiao .jie{width:1200px;height:400px;background:background:#1b1827;;margin-top:20px;margin: auto;}
+#gouPiao .jie>ul{width:1200px;height:92px;background:transparent;list-style: none;}
+#gouPiao .jie>ul>li{width:396px;height:92px;background:url(../赛事中心/1212.jpg);float:left;text-align: center;line-height: 92px;color:white;font-size: 25px;}
+#gouPiao .jie>ul>li:hover{cursor: pointer;}
+#gouPiao .jie>ul>li:nth-of-type(1){background:url(../赛事中心/1211.jpg);}
+#gouPiao .jie .jieACC{width:800px;height:400px;background:#1b1827;}
+#gouPiao .jie .jieACC>div{width:800px;height:400px;position:absolute;background:#1b1827;display:none;}
+#gouPiao .jie .jieACC>div:nth-of-type(1){display:block;}
+#gouPiao .jie .jieACC>div:nth-of-type(1)>ul{width:800px;height:50px;list-style:none;margin-top:20px;}
+#gouPiao .jie .jieACC>div:nth-of-type(1)>ul>li{width:220px;height:50px;background:url(../赛事中心/kuang.jpg);background-size:220px 50px;float:left;text-align: center;line-height:50px;color:white;margin-left:28px;}
+#gouPiao .jie .jieACC>div:nth-of-type(1)>ul>li:hover{cursor: pointer;}
+#gouPiao .jie .jieACC>div:nth-of-type(1)>ul .abc{background:url(../赛事中心/asd.png);background-size:220px 50px;}
+#gouPiao .jie .jieACC>div:nth-of-type(1) .acce{width:700px;height:280px;background:#1b1827;margin:30px;}
+#gouPiao .jie .jieACC>div:nth-of-type(1) .acce>div{width:700px;height:280px;background:#1b1827;position: absolute;}
+
+
+
+#heZuo{width:100%;height:150px;background:#1b1827;border:1px solid transparent;overflow:hidden;}
+#heZuo>div:nth-of-type(1){color:white;width:1700px;margin:auto;height:70px;font-weight:800;background:url(../hd.png) no-repeat;font-size:50px;margin-top:60px;background-position: center;padding-right:80px;text-align: center;}
+#heZuo>div:nth-of-type(2){width:300px;margin-left:10px;font-size:30px;background: transparent;margin-top:-80px;margin-left:950px;color:white;}
+#heZuo>div:nth-of-type(2)>span{font-size:15px;padding-top: -30px;color:white;}
+#jie{width:1920px;height:788px;background:url(../bg4_.jpg);}
+
+
+
+

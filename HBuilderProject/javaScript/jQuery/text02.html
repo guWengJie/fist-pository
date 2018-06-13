@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:200px;
+				height:2000px;
+				background: red;
+				margin: 120px auto;
+				border:1px solid red;
+			}
+			div>#box{
+				width:100px;
+				height:100px;
+				background: green;
+				margin: 100px;
+				border:10px solid blue;
+				padding:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<div><span>1345</span></div>
+		<div></div>
+		<div id="test">
+			<div class="s">asdf</div>
+		</div>
+		<div class="test"><span>sdfffs</span></div>
+		<div></div>
+		<div></div>-->
+		<div>
+			<div id="box">
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	$(function(){
+//		console.log($("div>#box").outerHeight(true));//自身的高度+padding+border+padding
+//		console.log($("div>#box").outerWidth(true));
+//		console.log($("div>#box").outerHeight());//自身的高度+padding+border
+//		console.log($("div>#box").outerWidth());
+//		console.log($("div>#box").innerHeight());//自身的高度+padding
+//		console.log($("div>#box").innerWidth());
+//		console.log($("div>#box").width());//自身的高度
+//		console.log($("div>#box").height());
+/*		$(window).scroll(function(){
+			if($(window).scrollTop()>300){
+				$("div>#box").css("position","fixed")
+			}
+		})
+		*/
+//		console.log($("div>#box").position().left);
+//		console.log($("div>#box").position().top);
+//		console.log($("div>#box").position());
+		
+//		console.log($("div>#box").offset().left);
+//		console.log($("div>#box").offset().top);
+//		console.log($("div>#box").offset());
+		
+		
+		
+//		$("#test").nextUntil().css("background","red");//获得选择器下面所有的。
+//		$("#test").nextAll().css("background","red");//获得选择器下面所有的。
+//		$("div").next(".test").css("background","red");//获得选择器下一个。
+//		$("div").find("span").css("background","red");//获得每个元素的后代。
+//		$("div").children("span").css("background","red");//当前的在                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+//		$("div").slice(2,5).css("background","red");//剪取指定内容
+//		$("div").not(".test").css("background","red");//去相反的
+	//	console.log($("div").is(".test"));//当前元素中内部是否包含这个类
+	//	$("div").has(".test").css("background","red");//当前元素中内部是否包含这个类
+	//	$("div").filter(":odd").css("background","red");//筛选多个元素1 3 5
+	//	$("div").filter(":even").css("background","red");//筛选多个元素0 2 4
+	//	$("div").filter("#test").css("background","red");//筛选个元素
+	//	$("div").last().css("background","red");//指定最后一个元素
+	//	console.log($("div").hasClass("test"))//判断是否有这个类
+	//	$("div").last().css("background","red");//指定最后一个元素
+	//	$("div").first().css("background","red");//指定第一一个元素
+	//	$("div").eq(3).css("background","red");//指定的索引的哪一个元素
+	})	
+</script>

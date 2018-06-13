@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			#div{
+				margin:auto;
+				width:1200px;
+				height:700px;
+			}
+			.box{				
+				width:1200px;
+				height:700px;
+				float:left;
+				border:1px solid red;
+				background-image: url(../img/012.gif);
+				background-size: 1200px 700px;
+				position: absolute;
+			}
+			.box>ul{
+				position: absolute;
+			}
+			.box>.circle{
+				width:30px;
+				height:30px;
+				top:670px;
+				background-image:url(../img/t013e1077c60e67c482.jpg);
+				background-size: 30px 30px;
+				border-radius:50%;
+				position: absolute;
+				z-index: 1000;
+			}
+			.box>.block{
+				width:300px;
+				height:30px;
+				background:deepskyblue;
+				border-radius:20px;
+				bottom:0px;
+				position: absolute;
+			}
+			.inn{
+				/*border:solid 1px red;*/
+				color:red;
+				width:300px;
+				height:100px;
+				font-size: 50px;
+				text-align: center;
+				line-height: 100px;
+				margin:350px auto;
+				position: relative;
+			}
+			.box1{
+				width:150px;
+				height:700px;
+				margin-left:1202px;
+				background:url(../img/20141204161336_2i2VM.jpeg);
+				border:1px solid green;
+			}
+			.box1>div{
+				width:150px;
+				height:60px;
+				font-size: 22px;
+				line-height: 60px;
+				text-align: center;
+				font-weight: 700;
+			}
+			.box1>div:nth-of-type(1){
+				background:pink;
+			}
+			.box1>div:nth-of-type(2){
+				background:red;
+			}
+			.box1>div:nth-of-type(3){
+				background:pink;
+			}
+			.box1>div:nth-of-type(4){
+				background:red;
+			}
+			.box1>div:nth-of-type(5){
+				background:pink;
+			}
+			.box1>div:nth-of-type(6){
+				background:red;
+			}
+			.box1>div:nth-of-type(7){
+				background:pink;
+			}
+			.box1>div:nth-of-type(8){
+				background:red;
+			}
+			.box1>div:nth-of-type(9){
+				background:pink;
+			}
+			.box1>div:nth-of-type(10){
+				background:red;
+			}
+			.box1>div:nth-of-type(11){
+				height:100px;
+				background:pink;
+			}
+			button{
+				width:40px;
+				height:45px;
+			}
+			#bu1{
+				display: block;
+				width:150px;
+				height:50px;
+				font-size: 30px;
+				background:white;
+				color:black;
+			}
+			#bu2{
+				display: block;
+				color:white;
+				width:150px;
+				height:50px;
+				background:black;
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width:1220px;height:900px;margin: auto;">
+		<div class="box">
+			<ul></ul>
+			<div class="circle"></div>
+			<div class="block"></div>
+			<div class="inn" ></div>
+		</div>
+		<div class="box1">
+			<div>游戏得分</div>
+			<div>0分</div>
+			<div>时间计时</div>
+			<div></div>
+			<div>游戏模式</div>
+			<div><button class="bu1">正常</button>&nbsp;&nbsp;<button class="bu2">向下</button></div>
+			<div>游戏难度</div>
+			<div>
+				<button class="bu1">困难</button>&nbsp;<button class="bu2">适中</button>&nbsp;<button class="bu3">容易</button>
+			</div>
+			<div>游戏状态</div>
+			<div></div>
+			<div><button id="bu1">开始</button>
+			<button id="bu2">重新开始</button></div>
+		</div>
+		<div style="margin-left: 200px;font-size: 16px;">
+			<p><h1><a href="D:\datalist.html">说明：</button></h1></p>
+			<!--<p>1.点击开始才可以操作一下按钮(重新开始除外)，</p>
+			<p>2.游戏时间为120秒,</p>
+			<p>3.游戏分数最高为3400分</p>
+			<p>4.奖励如下：
+				<div style="margin-left:60px;">
+					<p>1.最高分----奖励一辆汽车</p>
+					<p>2.3800分----奖励一个美女</p>
+					<p>3.2800分----奖励一百块</p>
+					<p>4.1800分----奖励一个洋娃娃</p>
+				</div>
+			</p>
+			<p>5.结束时会自动刷新游戏</p>
+			<p>6.祝各位玩家玩的愉快</p>
+			<p><font color="red" size="5">7.抵制不良游戏&nbsp;&nbsp;拒绝盗版游戏&nbsp;&nbsp;注意自我保护&nbsp;&nbsp;谨防受骗上当<br>
+			&nbsp;&nbsp;适度游戏益脑&nbsp;&nbsp;沉迷游戏伤身&nbsp;&nbsp;合理安排时间&nbsp;&nbsp;享受健康生活</font></p>-->
+		</div>	
+		
+		<!--<div id="box1">IT技术哪家强<br>深圳坪山找科创</div>-->
+<!--		<button id="bu">开始</button>-->
+	</body>
+</html>
+<script>
+	var block=document.querySelector(".box>.block");
+	var fenShu=document.querySelector(".box1>div:nth-of-type(2)");
+	var daoJiShi=document.querySelector(".box1>div:nth-of-type(4)");
+	var zhuangTai=document.querySelector(".box1>div:nth-of-type(10)");
+	var Xpos=1;
+	var fen=0;
+	var cnt=1,djs=120;
+	var time=null,djsTime=null;
+	
+	var Top=document.querySelector("ul")
+	var topTime=null,topVal=10,tttt=null;
+	var a=0;
+	var aTime=null;
+	function circleInit(){
+		this.box=document.getElementsByClassName("circle")[0];
+		this.ball=document.querySelector(".box");
+		this.inp=document.querySelector(".inn");
+		this.ul=document.querySelector("ul");
+		this.left=1;//从左向右
+		this.Xleft=0;//对象距离左边界
+		this.speed=2;
+		this.height=1;//从左向右
+		this.Yheight=670;//对象距离左边界
+	}
+	daoJiShi.innerText=0;
+	zhuangTai.innerText="未开始！";
+	
+	
+	
+	//里面的彩色方块
+	function RCBColor(val){
+		return Math.round(Math.random()*val);
+	}
+	circleInit.prototype.createLi=function(rows,cols){
+		for (var i=0;i<rows;i++) {
+			for (var j=0;j<cols;j++) {
+				var li=document.createElement("li");
+					li.style.width="120px";
+					li.style.height="40px";
+					li.style.listStyleType="none";
+					li.style.position="absolute";
+					li.style.border="3px solid #fff";
+					li.style.top=i*40+"px";
+					li.style.left=j*119+"px";
+					if(RCBColor(100)>60){
+						li.style.backgroundColor="red";
+					}else if(RCBColor(100)>70){
+						li.style.backgroundColor="green";
+					}else if(RCBColor(100)>90){
+						li.style.backgroundColor="pink";
+					}else{
+						li.style.backgroundColor="rgb("+RCBColor(255)+","+RCBColor(255)+","+RCBColor(255)+")";
+					}
+					this.ul.appendChild(li);
+			}
+		}
+	}
+	
+	circleInit.prototype.createLiNone=function(){
+		var list=document.querySelectorAll("li");
+		var flg=true;
+		for(var i=0;i<list.length;i++){
+			if(this.Xleft>list[i].offsetLeft && this.Xleft+this.box.offsetWidth<list[i].offsetLeft+list[i].offsetWidth){
+				if(this.Yheight<list[i].offsetTop+list[i].offsetHeight+topVal){
+					this.height=1;
+					this.Yheight=list[i].offsetTop+list[i].offsetHeight+topVal;
+					list[i].style.display="none";
+					if(list[i].style.backgroundColor=="red"){
+						this.inp.innerText="不错不错！";
+						fen+=100;
+					}else if(list[i].style.backgroundColor=="green"){
+						this.inp.innerText="厉害厉害！";
+						fen+=300;
+					}else if(list[i].style.backgroundColor=="pink"){
+						this.inp.innerText="牛逼啊！";
+						fen+=600;
+					}else{
+						this.inp.innerText="努力加油！亲！";
+						fen++;
+					}
+					fenShu.innerText=fen+"分";
+				}
+			}
+			if(list[i].style.display!="none"){
+				flg=false;
+			}
+		}
+		if(flg){
+			this.inp.innerText="YOU WIN!";
+			zhuangTai.innerText="Over";
+			clearInterval(time);
+			clearInterval(djsTime);
+			clearInterval(topTime);
+			alert("YOU WIN!")
+			
+		}
+	}
+	circleInit.prototype.Move=function(){//小球运动函数
+		this.box.style.left=this.Xleft+"px";//小球距离左边界的位置
+		if(this.left==1){//当小球从左往右走时
+			this.Xleft+=this.speed;//距离变大
+		}else{
+			this.Xleft-=this.speed;//距离变小
+		}
+		if(this.Xleft+this.box.offsetWidth>this.ball.offsetWidth){
+			this.left=0;
+			this.Xleft=this.ball.offsetWidth-this.box.offsetWidth;
+		}
+		if(this.Xleft<0){
+			this.left=1;
+			this.Xleft=0;
+		}
+		
+		this.box.style.top=this.Yheight+"px";//小球距离左边界的位置
+		if(this.height==1){//当小球从右往左走时
+			this.Yheight+=this.speed;//距离变大
+			if(Xpos<this.Xleft && this.Xleft+this.box.offsetWidth<Xpos+block.offsetWidth){
+				if(this.Yheight+this.box.offsetHeight+block.offsetHeight>this.ball.offsetHeight){
+					this.height=0;
+					this.Yheight=this.ball.offsetHeight-this.box.offsetHeight-block.offsetHeight;
+				}
+			}
+		}else{
+			this.Yheight-=this.speed;//距离变小
+		}
+		if(this.Yheight+this.box.offsetHeight>this.ball.offsetHeight){
+			/*this.height=1;
+			this.left=1;
+			this.Yheight=this.box.offsetHeight;
+			this.Xleft=this.ball.offsetWidth;*/
+			this.inp.innerText="Game Over";
+			zhuangTai.innerText="OVER！";
+			atime=setInterval(function(){
+				if(confirm("游戏结束(Game Over)")){
+					clearInterval(time);
+					clearInterval(djsTime);
+					clearInterval(topTime);
+					clearInterval(atime);
+					setInterval(function(){
+						location="移动广告.html";
+					},1000)
+				}else{ 
+					confirm("你输了!(Game Over)");
+					location="移动广告.html";
+				}
+			});
+			
+		}
+		if(this.Yheight<0){//当小球移动到最上面时
+			this.height=1;//改变方向
+			this.Yheight=0;//即将返回时的距离
+		}		
+	}	
+	var Box=new circleInit();//创建实例化对象
+	Box.createLi(5,10);
+
+	function djsFun(){
+		djs--;
+		if(djs==0){
+			clearInterval(djsTime);
+			clearInterval(time);
+			Box.inp.innerText="Game Over";
+			zhuangTai.innerText="OVER";
+			bu1.innerText="开始";
+			setInterval(function(){
+				location="移动广告.html";		
+			},2000)
+		}
+		daoJiShi.innerText=djs;
+	}
+	
+	document.getElementById("bu1").onclick=function(){
+		if(cnt==1){
+			bu1.innerText="暂停";
+			daoJiShi.innerText=djs;
+			zhuangTai.innerText="游戏进行中...";
+			document.querySelector(".box1>div:nth-of-type(6)>.bu2").onclick=function(){//彩色块下移
+				topTime=setInterval(function(){
+					topVal++;
+					if(topVal>700-30-20-240){
+						clearInterval(topTime);
+						clearInterval(djsTime);
+						clearInterval(time);
+						zhuangTai.innerText="Game Over!";
+						Box.inp.innerText="Game Over!";
+					}
+					Top.style.top=topVal+"px";
+				},1000)
+			}
+			
+			
+			window.onkeydown=function(e){//e是事件对象挡板的移动
+			//console.log(e);
+				if(e.keyCode==39){//挡板向右移动
+					Xpos+=30;//挡板向右移动，距离变大
+					if(Xpos+block.offsetWidth>Box.ball.offsetWidth){
+						//当挡板移动到最右边时瞒足以下这个条件
+						Xpos=Box.ball.offsetWidth-block.offsetWidth;
+					}
+				}else if(e.keyCode==37){//挡板向左移动
+					Xpos-=30;//挡板向左移动，距离变大
+					if(Xpos<0){//当挡板移动到最右边时瞒足以下这个条件
+						Xpos=0;
+					}
+				}
+				block.style.left=Xpos+"px";
+			}
+			
+			document.querySelector(".box1>div:nth-of-type(6)>.bu1").onclick=function(){
+				alert("已正常");
+				location="移动广告.html";
+			}
+			
+			document.querySelector(".box1>div:nth-of-type(8)>.bu1").onclick=function(){
+				Box.speed=6;
+			}
+			document.querySelector(".box1>div:nth-of-type(8)>.bu2").onclick=function(){
+				Box.speed=4;
+			}
+			document.querySelector(".box1>div:nth-of-type(8)>.bu3").onclick=function(){
+				Box.speed=2;
+			}
+	
+			
+			time=setInterval(function(){
+				Box.Move();//小球开始转动
+				Box.createLiNone();
+			},10)
+			djsTime=setInterval(function(){
+				djsFun();
+			},1000);
+			cnt--;
+		}else{
+			bu1.innerText="开始";
+			zhuangTai.innerText="游戏已暂停！";
+			clearInterval(time);
+			clearInterval(djsTime);
+			cnt++;
+		}
+		
+	}
+	document.getElementById("bu2").onclick=function(){
+		clearInterval(time);
+		clearInterval(topTime);
+		clearInterval(djsTime);
+		bu1.innerText="开始";
+		if(confirm("游戏结束")){
+			zhuangTai.innerText="未开始！";
+			aTime=setInterval(function(){
+				a++;
+				if(a==3){
+					a=0;
+					clearInterval(aTime);
+					location="移动广告.html";
+				}
+			},1000);
+		}
+	}
+	
+	
+	
+	
+	
+/*	function circleInit(){
+		this.box=document.getElementById("box1");
+		this.left=1;//从左向右
+		this.Xleft=0;//对象距离左边界
+		this.speed=100;
+		this.height=1;//从左向右
+		this.Yheight=0;//对象距离左边界
+	}
+	circleInit.prototype.Move=function(){//小球运动函数
+		this.box.style.left=this.Xleft+"px";//小球距离左边界的位置
+		if(this.left==1){//当小球从左往右走时
+			this.Xleft+=this.speed;//距离变大
+		}else{
+			this.Xleft-=this.speed;//距离变小
+		}
+		if(this.Xleft+this.box.offsetWidth>window.innerWidth){
+			this.left=0;
+			this.Xleft=window.innerWidth-this.box.offsetWidth;
+		}
+		if(this.Xleft<0){
+			this.left=1;
+			this.Xleft=0;
+		}	
+	}	
+	var box=new circleInit();//创建实例化对象
+	setInterval(function(){
+		box.Move();//小球开始转动
+	},300)*/
+</script>

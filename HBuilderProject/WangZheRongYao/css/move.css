@@ -1,0 +1,136 @@
+*{margin: 0px;padding: 0px;list-style:none;}
+#gaDet{width: 100%;height:140px;background:transparent;position:absolute;top:596px;}
+#gaDet .hero{width:1700px;height:132px;background: transparent;margin: auto;}
+#gaDet .hero .hero01{width:1100px;height:132px;margin: auto;left: 400px;background:#124b7a;}
+#gaDet .hero .hero01 ul{width:700px;height:82px;overflow: hidden;background: url(../游戏资料/背.jpg);float: left;margin-top:10px;padding-top:40px;}
+#gaDet .hero .hero01 ul>li{width: 78px;height:76px;list-style: none;float: left;}
+#gaDet .hero .hero01 ul>li:hover{cursor:pointer;}
+#gaDet .hero .hero01 ul>li:nth-of-type(1){width:224px;}
+#gaDet .hero .hero01 p{width:450px;height:20px;background:transparent;float: left;padding-top:50px;position: relative;top:-165px;color:whitesmoke;}
+#gaDet .hero .hero01 .hero02{line-height:132px;color:darkgray;width:400px;height:132px;float: left;background:url(../游戏资料/hero01.png) no-repeat;background-size:100px 132px;}
+#gaDet .hero .hero01 .hero02>span{padding-left: 110px;}
+#gaDet .hero .hero01 .hero02>span>a{color:darkgray;text-decoration:none;}
+#gaDet .hero .hero01 .hero02>span>a:hover{color:white;text-decoration:underline;}
+
+#data{width:100%;height:634px;background:#fafafa;position: absolute;top:728px;}
+#data .dat{width:1700px;height:634px;background:#fafafa; margin: auto;}
+#data .dat .da{width:1250px;height:35px;background:transparent;color: slategray;margin:auto;}
+#data .dat .da>a{display:inline-block;width:100px;height:35px;background-size:35px 35px;line-height:35px;color: slategray;margin-top:20px;}
+#data .dat .da>span{display:block;width:30px;height:35px;background:url(../游戏资料/fff.png);background-size:35px 40px;float:left;margin-top:20px;}
+#data .dat .da .vid{margin-top:30px;height:550px;width:1200px;background:#FAFAFA;}
+#data .dat .da .vid>p{margin-left:30px;padding-top:10px;color:#000;font-size:25px;}
+#data .dat .da .vid>video{margin-left:30px;float:left;}
+#data .dat .da .vid .ull{margin-left:30px;float:left;height:40px;width:400px;background:url(../游戏资料/zhang.jpg) no-repeat;padding-left:20px;}
+#data .dat .da .vid .ull>ul{height:40px;width:400px;background:#FAFAFA;}
+#data .dat .da .vid .ull>ul>li{float:left;width: 130px;text-align: center;line-height: 40px;height:37px;}
+#data .dat .da .vid .ull>ul .pe{border-bottom:3px green solid;}
+#data .dat .da .vid .ull .ol{height:414px;width:400px;background:#FAFAFA;}
+#data .dat .da .vid .ull .ol>ol{height:414px;width:400px;background:whitesmoke;;position:absolute;display:none;}
+#data .dat .da .vid .ull .ol>ol:nth-of-type(1){display:block;}
+#data .dat .da .vid .ull .ol>ol>li{width:400px;height:40px;font-size:13px;overflow: hidden;margin-top:3px;text-overflow: ellipsis;white-space: nowrap;}
+#data .dat .da .vid .ull .ol>ol>li:hover{text-decoration: underline;color:black;}
+#data .dat .da .vid .ull .ol>ol>li>span{float:right;color:gray;}
+#data .dat .da .vid .ull .ol>ol>li>p{color:gray;font-size:12px;}
+#data .dat .da .vid .ull .ol>ol>li>div{width:20px;height:20px;background:whitesmoke;border-radius:50%;float:left;text-align: center;}
+#data .dat .da .vid .ull .ol>ol>li .di{width:40px;height:40px;background:wheat;font-size:30px;color:green;}
+
+#middle{width:100%;height:200px;background:#FAFAFA;position:relative;top:214px;}
+#middle .Gamedrtr{width:1200px;height:200px;background:#FAFAFA;margin: auto;}
+#middle .Gamedrtr>div{width:182px;height:180px;background:white;float:left;margin-left:12px;margin-top:12px;cursor:pointer;font-size:13px;}
+
+#foor{width:100%;height:950px;background:#FAFAFA;position:relative;top:214px;}
+#foor .fo{width:1200px;height:950px;background:transparent;margin: auto;}
+#foor .fo .fon{width:1100px;height:40px;background:transparent;color:grey;}
+#foor .fo .fon .sp02{font-size:30px;color:black;}
+#foor .fo .fon .sp03{float:right;padding-top:20px;color:#328bd1;}
+#foor .fo .shuo{width:100px;height:80px;background:url(../游戏资料/touxiang.png) no-repeat;float:left;background-position:20px 10px;}
+#foor .fo #input{width:900px;height:78px;background:white;float:left;border:3px gray solid;}
+#foor .fo button{width:80px;height:82px;background:#328bd1;float:left;border:0;font-size:20px;color:white;}
+#foor .fo .font{width:1100px;height:45px;background:#FAFAFA;color:grey;clear:left;padding-top:60px;border-bottom:1px gray solid;}
+#foor .fo .font .sp02{font-size:30px;color:black;}
+#foor .fo .font .sp03{float:right;padding-top:20px;}
+#foor .fo .pin{width:1100px;height:100px;background:#FAFAFA;color:grey;border-bottom:1px gray solid;font-size:13px;}
+#foor .fo .pin>div{width:50px;height:50px;background:url(../游戏资料/120.jpg);border-radius:50%;margin:10px;float:left;}
+#foor .fo .pin>p{margin-top:5px;}
+#foor .fo .pin>p:nth-of-type(1){color:#328bd1;}
+#foor .fo .pin>p:nth-of-type(1)>span{color:gray;}
+#foor .fo .pin>p:nth-of-type(2){color:black;}
+#foor .fo .pin>p:nth-of-type(3){background:url(../游戏资料/shou.jpg) no-repeat;padding-left:20px;width: 40px;float:left;}
+#foor .fo .pin>p:nth-of-type(3):hover{background:url(../游戏资料/shou01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin>p:nth-of-type(4){background:url(../游戏资料/hua.jpg) no-repeat;padding-left:20px;width: 40px;margin-left:20px;float:left;}
+#foor .fo .pin>p:nth-of-type(4):hover{background:url(../游戏资料/hua01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin>p:nth-of-type(5){background:url(../游戏资料/jing.jpg) no-repeat;padding-left:25px;width: 40px;margin-left:20px;float:right;margin-right:50px;display:none;}
+#foor .fo .pin>p:nth-of-type(5):hover{background:url(../游戏资料/jing01.jpg) no-repeat;color:#328bd1;}
+
+
+#foor .fo .pin1{width:1100px;height:100px;background:#FAFAFA;color:grey;border-bottom:1px gray solid;font-size:13px;}
+#foor .fo .pin1>div{width:50px;height:50px;background:url(../游戏资料/130.jpg);border-radius:50%;margin:10px;float:left;}
+#foor .fo .pin1>p{margin-top:5px;}
+#foor .fo .pin1>p:nth-of-type(1){color:#328bd1;}
+#foor .fo .pin1>p:nth-of-type(1)>span{color:gray;}
+#foor .fo .pin1>p:nth-of-type(2){color:black;}
+#foor .fo .pin1>p:nth-of-type(3){background:url(../游戏资料/shou.jpg) no-repeat;padding-left:20px;width: 40px;float:left;}
+#foor .fo .pin1>p:nth-of-type(3):hover{background:url(../游戏资料/shou01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin1>p:nth-of-type(4){background:url(../游戏资料/hua.jpg) no-repeat;padding-left:20px;width: 40px;margin-left:20px;float:left;}
+#foor .fo .pin1>p:nth-of-type(4):hover{background:url(../游戏资料/hua01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin1>p:nth-of-type(5){background:url(../游戏资料/jing.jpg) no-repeat;padding-left:25px;width: 40px;margin-left:20px;float:right;margin-right:50px;display:none;}
+#foor .fo .pin1>p:nth-of-type(5):hover{background:url(../游戏资料/jing01.jpg) no-repeat;color:#328bd1;}
+
+
+#foor .fo .pin2{width:1100px;height:100px;background:#FAFAFA;color:grey;border-bottom:1px gray solid;font-size:13px;}
+#foor .fo .pin2>div{width:50px;height:50px;background:url(../游戏资料/124.jpg);border-radius:50%;margin:10px;float:left;}
+#foor .fo .pin2>p{margin-top:5px;}
+#foor .fo .pin2>p:nth-of-type(1){color:#328bd1;}
+#foor .fo .pin2>p:nth-of-type(1)>span{color:gray;}
+#foor .fo .pin2>p:nth-of-type(2){color:black;}
+#foor .fo .pin2>p:nth-of-type(3){background:url(../游戏资料/shou.jpg) no-repeat;padding-left:20px;width: 40px;float:left;}
+#foor .fo .pin2>p:nth-of-type(3):hover{background:url(../游戏资料/shou01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin2>p:nth-of-type(4){background:url(../游戏资料/hua.jpg) no-repeat;padding-left:20px;width: 40px;margin-left:20px;float:left;}
+#foor .fo .pin2>p:nth-of-type(4):hover{background:url(../游戏资料/hua01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin2>p:nth-of-type(5){background:url(../游戏资料/jing.jpg) no-repeat;padding-left:25px;width: 40px;margin-left:20px;float:right;margin-right:50px;display:none;}
+#foor .fo .pin2>p:nth-of-type(5):hover{background:url(../游戏资料/jing01.jpg) no-repeat;color:#328bd1;}
+
+
+#foor .fo .pin3{width:1100px;height:100px;background:#FAFAFA;color:grey;border-bottom:1px gray solid;font-size:13px;}
+#foor .fo .pin3>div{width:50px;height:50px;background:url(../游戏资料/130.jpg);border-radius:50%;margin:10px;float:left;}
+#foor .fo .pin3>p{margin-top:5px;}
+#foor .fo .pin3>p:nth-of-type(1){color:#328bd1;}
+#foor .fo .pin3>p:nth-of-type(1)>span{color:gray;}
+#foor .fo .pin3>p:nth-of-type(2){color:black;}
+#foor .fo .pin3>p:nth-of-type(3){background:url(../游戏资料/shou.jpg) no-repeat;padding-left:20px;width: 40px;float:left;}
+#foor .fo .pin3>p:nth-of-type(3):hover{background:url(../游戏资料/shou01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin3>p:nth-of-type(4){background:url(../游戏资料/hua.jpg) no-repeat;padding-left:20px;width: 40px;margin-left:20px;float:left;}
+#foor .fo .pin3>p:nth-of-type(4):hover{background:url(../游戏资料/hua01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin3>p:nth-of-type(5){background:url(../游戏资料/jing.jpg) no-repeat;padding-left:25px;width: 40px;margin-left:20px;float:right;margin-right:50px;display:none;}
+#foor .fo .pin3>p:nth-of-type(5):hover{background:url(../游戏资料/jing01.jpg) no-repeat;color:#328bd1;}
+
+
+#foor .fo .pin4{width:1100px;height:100px;background:#FAFAFA;color:grey;border-bottom:1px gray solid;font-size:13px;}
+#foor .fo .pin4>div{width:50px;height:50px;background:url(../游戏资料/140.jpg);border-radius:50%;margin:10px;float:left;}
+#foor .fo .pin4>p{margin-top:5px;}
+#foor .fo .pin4>p:nth-of-type(1){color:#328bd1;}
+#foor .fo .pin4>p:nth-of-type(1)>span{color:gray;}
+#foor .fo .pin4>p:nth-of-type(2){color:black;}
+#foor .fo .pin4>p:nth-of-type(3){background:url(../游戏资料/shou.jpg) no-repeat;padding-left:20px;width: 40px;float:left;}
+#foor .fo .pin4>p:nth-of-type(3):hover{background:url(../游戏资料/shou01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin4>p:nth-of-type(4){background:url(../游戏资料/hua.jpg) no-repeat;padding-left:20px;width: 40px;margin-left:20px;float:left;}
+#foor .fo .pin4>p:nth-of-type(4):hover{background:url(../游戏资料/hua01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin4>p:nth-of-type(5){background:url(../游戏资料/jing.jpg) no-repeat;padding-left:25px;width: 40px;margin-left:20px;float:right;margin-right:50px;display:none;}
+#foor .fo .pin4>p:nth-of-type(5):hover{background:url(../游戏资料/jing01.jpg) no-repeat;color:#328bd1;}
+
+
+#foor .fo .pin5{width:1100px;height:100px;background:#FAFAFA;color:grey;border-bottom:1px gray solid;font-size:13px;}
+#foor .fo .pin5>div{width:50px;height:50px;background:url(../游戏资料/150.jpg);border-radius:50%;margin:10px;float:left;}
+#foor .fo .pin5>p{margin-top:5px;}
+#foor .fo .pin5>p:nth-of-type(1){color:#328bd1;}
+#foor .fo .pin5>p:nth-of-type(1)>span{color:gray;}
+#foor .fo .pin5>p:nth-of-type(2){color:black;}
+#foor .fo .pin5>p:nth-of-type(3){background:url(../游戏资料/shou.jpg) no-repeat;padding-left:20px;width: 40px;float:left;}
+#foor .fo .pin5>p:nth-of-type(3):hover{background:url(../游戏资料/shou01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin5>p:nth-of-type(4){background:url(../游戏资料/hua.jpg) no-repeat;padding-left:20px;width: 40px;margin-left:20px;float:left;}
+#foor .fo .pin5>p:nth-of-type(4):hover{background:url(../游戏资料/hua01.jpg) no-repeat;color:#328bd1;}
+#foor .fo .pin5>p:nth-of-type(5){background:url(../游戏资料/jing.jpg) no-repeat;padding-left:25px;width: 40px;margin-left:20px;float:right;margin-right:50px;display:none;}
+#foor .fo .pin5>p:nth-of-type(5):hover{background:url(../游戏资料/jing01.jpg) no-repeat;color:#328bd1;}
+
+#foor .fo .butt{width:1100px;height:40px;background:gainsboro;color:grey;font-size:13px;margin-top:30px;}
+#foor .fo .butt:hover{background:grey;color:gainsboro;}

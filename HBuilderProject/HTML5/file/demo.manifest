@@ -1,0 +1,11 @@
+CACHE MANIFEST
+
+# cache v0.01
+CACHE:
+img/07.png
+
+#不做缓存
+NETWORK:
+
+FallBack:
+img/15.jpg  img/07.png

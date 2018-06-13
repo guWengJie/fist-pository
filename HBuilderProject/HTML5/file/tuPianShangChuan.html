@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dest" style="border:1px solid red; width: 800px; height:700px;">
+			<p>请把文件拖进来！</p>
+			<ul id="list"></ul>	
+		</div>
+		
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	var div=document.getElementById("dest")
+	div.addEventListener("dragenter",function(ev){
+		ev.stopPropagation();//取消冒泡
+		ev.preventDefault();//取消浏览器默认行为
+	});
+	
+	div.addEventListener("dragover",function(ev){
+		ev.stopPropagation();//取消冒泡
+		ev.preventDefault();//取消浏览器默认行为
+	});
+	
+	div.addEventListener("drop",function(ev){
+		var files=ev.dataTransfer.files;
+		ev.stopPropagation();//取消冒泡
+		ev.preventDefault();//取消浏览器默认行为
+		for(var i=0;i<files.length;i++){
+			var File=files[i];
+			var imgUrl=window.URL.createObjectURL(File);
+			var li=document.createElement("li");
+				li.innerHTML="<img src="+imgUrl+" width=100 height=100 /><span>"+File.name+"</span>"
+		document.getElementById("list").appendChild(li);
+		}
+	})
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	</head>
+	<body>
+		<div class="row">
+		    <div class="col-xs-4">
+		        <a href="#" class="thumbnail">
+		            <img src="../bootstrap/img/1.jpg" alt="通用的占位符缩略图">
+		        </a>
+		    </div>
+		    <div class="col-xs-4">
+		        <a href="#" class="thumbnail">
+		            <img src="../bootstrap/img/4.jpg" alt="通用的占位符缩略图">
+		        </a>
+		    </div>
+		    <div class="col-xs-4">
+		        <a href="#" class="thumbnail">
+		            <img src="../bootstrap/img/3.jpg" alt="通用的占位符缩略图">
+		        </a>
+		    </div>
+		   
+		</div>
+		
+		<ul class="pagination">
+		    <li class="disabled"><a href="#">&laquo;</a></li>
+		    <li class="active"><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li class="disabled"><a href="#">&raquo;</a></li>
+		</ul>
+		
+		
+	</body>
+</html>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+	var arrImg=["../bootstrap/img/1.jpg","../bootstrap/img/4.jpg","../bootstrap/img/3.jpg","../img/014.gif","../img/016.gif","../img/0198.gif","../img/012.gif","../img/013.gif","../img/014.gif","../img/016.gif","../img/0198.gif","../bootstrap/img/3.jpg","../img/014.gif","../img/016.gif","../img/0198.gif","../img/012.gif","../img/013.gif","../img/014.gif","../img/016.gif"];
+	var imgArr=document.querySelectorAll("img");
+	$("ul").on("click","li",function(){
+		var agr=$(this).text();
+		$(this).addClass("active").siblings().removeClass("active");
+		var data=arrImg.filter(function(a,b){
+			return b>=agr*3-3 && b<=agr*3;
+		})
+		
+		for (var i=0; i<imgArr.length;i++) {
+			imgArr[i].src=data[i];
+		}
+		
+//		console.log(agr)
+	})
+</script>

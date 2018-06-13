@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet/less" type="text/css" href="../css/Login.less"/>
+		<script src="../js/less.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".head>ul>li").mouseenter(function(){
+					$(this).addClass("artive").siblings().removeClass("artive");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="head">
+				<p>订房热线：<strong>+86-744-75558888</strong></p>
+				<ul>
+					<li>首页</li>
+					<li class="artive">会员中心</li>
+					<li>服务设施</li>
+					<li>在线预订</li>
+					<li>特价优惠</li>
+					<li>公司简介</li>
+					<li>媒体中心</li>
+				</ul>
+			</div>
+			
+			<div class="ody">
+				<div class="cont">
+					<p>会员登录</p><br><br><br>
+					<form>
+						用户名：<input type="text" value=""/><br><br>
+						密&nbsp;&nbsp;&nbsp;码：<input type="text" value=""/><br><br><br>
+						<input type="submit" value="登录"/><br><br>
+						<span>忘记密码？立即注册！</span>
+					</form>
+				</div>
+			</div>
+			
+			<div class="foot">
+				<p>
+					Copyright SAMANTHA 盛美达 2011-2014 | 线路推荐 | 酒店地理 | 在线客服
+				</p>
+			</div>
+			
+		</div>
+	</body>
+</html>

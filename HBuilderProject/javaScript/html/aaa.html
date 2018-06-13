@@ -1,0 +1,617 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模板</title>
+	</head>
+	<style>
+		* {                        /*所有对象边界0，内边距0*/
+			margin:0px;
+			padding:0px;
+		}
+		div{
+			float:left;
+			margin-top:100px;
+			
+		}
+		
+		#div1{
+			background:red;
+			width:480px;
+			height:80px;
+			margin:100px;
+			position:relative;         /*相对定位，其内部对象如果是绝对定位，则位置是相对于div1开始计算的*/
+			overflow:hidden
+		}
+		
+		#div1 ul {
+			width:960px;
+			position:absolute;              /*由于div1是相对定位，所以ul的位置是相对于div1开始计算的*/
+			left:0px;
+			top:0px;
+		
+		}
+		
+		#div1 ul li img{
+			width:120px;
+			height:80px;
+		}
+		
+		#div1 ul li{
+			width:120px;
+			height:80px;
+			list-style:none;
+			float:left;
+		}
+	</style>
+
+	<script>
+		onload = function(){
+			var oLeft = document.getElementById('toLeft');
+			var oRight = document.getElementById('toRight');
+			var oDiv = document.getElementById('div1');
+			var oUL = document.getElementById("ul");
+			
+			var rec = 2;
+			var source = 2;
+			
+			oLeft.onclick = function(){
+				rec = -2;
+			}
+			oRight.onclick = function(){
+				rec = 2;
+			}
+			oDiv.onmouseover = function(){
+				//source = rec;                   //两种写法都可以
+				//rec = 0;
+				clearInterval(timer);
+			}
+			oDiv.onmouseout = function(){
+				//rec = source;                   //两种写法都可以
+				timer = setInterval(move,24);
+			}
+			
+			function move(){
+				oUL.style.left = oUL.offsetLeft+rec;
+				if(rec>0){
+					if(oUL.offsetLeft>=0){
+						oUL.style.left = -580;
+					}
+				} else if(rec<0){
+					if(oUL.offsetLeft<=-480){
+						oUL.style.left=0;
+					}
+				}
+				tx1.value = oUL.offsetLeft;
+				
+			}
+			move();
+			var timer = setInterval(move,24);
+			
+		}
+		
+	</script>
+
+	<body>
+    
+    
+    <div>
+    	<input id = "toLeft" type = "button" value = "向左">
+    </div>
+    <div id="div1">
+    	<ul id="ul">
+        	<li><img src = "../img/img1.jpg"></li>
+            <li><img src = "../img/img2.jpg"></li>
+            <li><img src = "../img/img3.jpg"></li>
+            <li><img src = "../img/img4.jpg"></li>
+        </ul>
+    </div>
+    <div>
+   	 	<input id = "toRight" type = "button" value = "向右">
+    </div>
+    <input id="tx1" type = "text" value = "0";>
+    	
+	</body>
+</html>-->
+	
+	
+<style>
+	/*.A{
+		width:50px;
+		height:50px;
+		float:left;
+		background:red;
+		margin:12;
+	}
+	.B{
+		width:50px;
+		height:50px;
+		float:left;
+		margin:12;
+	}
+	span{	
+		width:100px;
+		height:100px;
+	}*/
+	div{	
+		width:200px;
+		height:200px;
+		background:red;
+	}
+
+
+</style>
+<head>
+			<meta charset="UTF-8">
+</head>
+<body>
+	<!--  
+	11111111
+	<p style="">测试1</p>
+	<p>测试2</p>
+	<p>测试3</p>
+	<p>测试4</p>
+
+	2222222222222-->
+	<table id="tb" border=1>
+		<tbody>
+			<tr>
+				<td>第一行</td><td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td><td>第一行</td>
+			</tr>
+		</tbody>
+	</table>
+<!--  
+	33333333333333
+	<input type="checkbox" value="1" name="check" checked="true" />
+	<input type="checkbox" value="1" name="check" />
+	<input type="checkbox" value="1" name="check" checked="true" />
+	<input type="checkbox" value="1" name="check" />
+	<input type="checkbox" value="1" name="check" checked="true" />
+	<input type="button" value="你选中的个数" id="in1"/>\
+
+	1111111111111111
+	<a href="#">asdfas</a> ||| 
+	<a href="#">asdfas</a> |||
+	<a href="#">asdfas</a>|||
+	<a href="#">asdfas</a>
+
+	22222222222222
+	<input type="text">
+	<input type="checkbox" >
+	<input type="text">
+
+	3333333333333
+	<div class="A"> </div>
+	<div class="A"> </div>
+	<div class="A"> </div>
+	<div class="B"> </div>
+	<div class="B"> </div>
+	<div class="B"> </div><br><br><br><br><br><br>
+	<input type="button" value="切换" id="in1" >
+
+	444444444444444444444444444
+	<input id="text" type="text">
+
+	5555555566666666666666
+	<div id="d1"><span>12</span><span>12</span><span>12</span></div>
+	
+	7777777777788888888888
+	<table border="1">
+		<tr>
+			<td> 1</td>
+			<td class="A">2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+	</body>
+	
+	99999999999999
+	<input type="button" value="切换" id="in1">
+	<input type="button" value="asd" id="in2">
+	<input type="text" value="sd" id="in3">
+
+		10  11  12  13 
+	<form id="fo"> 
+		<input type="hidden" value="asd">
+		<input type="text" value="ASD">
+		<input type="hidden" value="456">
+		<input type="text" value="ASDFA">
+		<input type="hidden" value="asd">
+	</form>	
+	14  15  16  
+	<input type="button" value="隐藏" id="in1">
+	<table border=1>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+		</tr>
+	</table>
+	
+  17  18
+	<table>
+	<tr>
+		<td>money</td>
+		<td>asd</td>
+		<td>money</td>
+		<td></td>
+		<td></td>
+	</tr>
+	</table>
+
+	19-->
+	<div>
+		asdfasdf
+	</div>
+	<input type="button" value="asdf" id="in1">	
+	<!--20
+	<input type="text" value="asdf">
+	<input type="button" value="张三">
+	
+	<input type="checkbox" value="1" name="check" checked="true">
+	<input type="checkbox" value="1" name="check">
+	<input type="checkbox" value="1" name="check">
+	<input type="checkbox" value="1" name="check">
+	<input type="checkbox" value="1" name="check">   
+	<input type="button" value="全选" id="quan1">
+	<input type="button" value="全不选" id="quan2">
+	<input type="button" value="反选" id="quan3">-->
+	
+
+
+<script>
+	/*题目一：
+	var pArr = document.getElementsByTagName("p");
+	for(x in pArr){
+		pArr[x].onclick = function (){			
+			this.style.background="red";
+		}
+	}*/
+
+	/*题目二：使一个特定表格隔行变色*/
+
+
+	var Table = document.getElementById("tb");
+	var rows = Table.tBodies[0].rows;
+	for(var i=0;i<rows.length ;i++){	
+		if(i%2==0){
+			rows[i].style.background="red";
+		}else{	
+			rows[i].style.background="yellow";
+		}
+	}
+	/*题目三：对多选框进行操作，输出选中的多选框的个数
+	var input = document.getElementsByTagName("input");
+	var in1 = document.getElementById("in1");
+	var cnt=0;
+	in1.onclick = function(){
+		for(var i=0;i<input.length-1 ;i++){
+			if(input[i].checked == true){
+				cnt++;
+			}
+		}
+		alert(cnt);
+		cnt=0;
+	}*/
+
+
+	/*1.	将网页上所有的超链接的下划线去掉。
+	var aa = document.getElementsByTagName("a");
+	for(var x=0 ;x<aa.length;x++){	
+		aa[x].style.textDecoration="none";
+	}*/
+	/*2.	将表单中所有的input框的边框编程蓝色。
+	var input = document.getElementsByTagName("input");
+	//input[0].style.border="1px solid red";
+	for(var x=0 ;x<input.length;x++){	
+		input[x].style.border="1px solid blue";
+	}
+	3.	页面上有6个div，有三个
+	var div = document.getElementsByTagName("div");	
+	var button = document.getElementById("in1");
+	button.onclick = function (){	
+		for(var i=0;i<div.length ;i++){	
+			if(div[i].className=="A"){
+				div[i].setAttribute("className","B");
+			}else{	
+				div[i].setAttribute("className","A");
+			}
+		}
+	}*/
+
+	/*4.	将页面id=test的input框的背景颜色变成黄色。
+	var input = document.getElementById("text");
+	input.style.background="yellow"
+
+	5.	将div里面的span元素加上边框。	
+	var div = document.getElementsByTagName("div");	
+	for(var i=0;i<div.length ;i++){	
+		var span = div[i].childNodes;
+		if(span.length>0){	
+			for(var x=0;x<span.length ;x++){	
+				if(span[x].nodeName.toLowerCase() == "span"){	
+					span[x].style.border="3px solid gray";
+				}				
+			}
+		}		
+	}*/
+
+	/*6.	将div的子元素span加上背景颜色。
+	var div = document.getElementsByTagName("div");	
+	for(var i=0;i<div.length ;i++){	
+		var span = div[i].childNodes;
+		if(span.length>0){	
+			for(var x=0;x<span.length ;x++){	
+				if(span[x].nodeName.toLowerCase() == "span"){	
+					span[x].style.background="green";
+				}				
+			}
+		}		
+	}*/
+	
+
+	/*7.	将页面class=A的td下一个td元素加上背景颜色。
+	var td = document.getElementsByTagName("td");
+	for(var i=0;i<td.length ;i++){
+		if(td[i].className == "A"){	
+			td[i+1].style.background="red";
+		}
+	}*/
+	
+	
+	/*8.	将页面class=A的td之后所有td元素加上背景颜色。
+	var td = document.getElementsByTagName("td");
+	var sub=0;
+	for(var i=0;i<td.length ;i++){
+		if(td[i].className == "A"){	
+			sub=i;
+		}
+	}
+	//alert(sub);
+	for(var i=sub+1;i<td.length ;i++){	
+		td[i].style.background="red";
+	}*/
+
+	/*9.	网页上所有按钮变成失效（变灰不能点击）。
+	var input = document.getElementsByTagName("input");
+	for(var i=0;i<input.length ;i++){	
+		if(input[i].type == "button"){	
+			input[i].style.color="gray";
+			input[i].onclick=null;
+		}
+	}*/
+
+	/*10.	将表单上所有的checkbox加上背景颜色。
+	var from = document.getElementById("fo");
+	for(var i=0;i<from.length ;i++){	
+		if(from[i].type == "checkbox"){	
+			from[i].style.background="gray";
+		}
+	}
+	*/
+	/*11.	将表单上的密码框的文字变成红色
+	var from = document.getElementById("fo");
+	for(var i=0;i<from.length ;i++){	
+		if(from[i].type == "password"){	
+			from[i].style.color="red";
+		}
+	}*/
+	
+	/*12.	将表单上的隐藏框的值拼接弹出来。	
+	var from = document.getElementById("fo");
+	for(var i=0;i<from.length ;i++){
+		if(from[i].type == "hidden"){	
+			document.write(from[i].value);
+		}
+	}*/
+
+	/*13.	将文本输入框加上灰色边框。
+	var te = document.getElementsByTagName("textarea");
+	for(var i=0;i<te.length ;i++){	
+		te[i].style.border="5px solid gray";
+	}*/
+
+	
+	/*14.	将一个表格的第一行和最后一行的背景颜色设置为黄色。
+	var table = document.getElementsByTagName("table")[0];
+	table.tBodies[0].rows[0].style.background="yellow";	
+	table.tBodies[0].rows[table.tBodies[0].rows.length-1].style.background="yellow";*/
+	
+	/*15.	将表格的单数行背景颜色设置为浅灰色，偶数行背景颜色设置为浅蓝色。
+	var table = document.getElementsByTagName("table");
+	for(var i=0; i<table.length;i++){	
+		var rows = table[i].tBodies[0].rows;
+		for(var x=0;x<rows.length;x++){	
+			if(x%2==0){	
+				rows[x].style.background="red";
+			}else{	
+				rows[x].style.background="gray";
+			}
+		}
+	}*/
+	
+	/*16.	将一个表格行数大于5的行隐藏起来，表格下面有一个按钮，点击一下再将隐藏的显示出来，再点击一下又隐藏起来。
+	var table = document.getElementsByTagName("table");
+	var inp = document.getElementById("in1");
+	var cnt=0;
+	for(var i=0; i<table.length;i++){	
+		var rows = table[i].tBodies[0].rows;
+		inp.onclick = function(){
+			if(cnt==0){
+				cnt=1;
+				for(var x=0;x<rows.length;x++){	
+					if(x>4){	
+						rows[x].style.display="none";
+					}
+				}							
+			}else{	
+				cnt=0;			
+				for(var x=0;x<rows.length;x++){	
+					if(x>4){	
+						rows[x].style.display="block";
+					}
+				}
+			}
+		}
+	}*/
+	
+	/*	17.	在一个表格中，将td里面的内容含有money的字体变红。
+	var table = document.getElementsByTagName("table");	
+	var row=table[0].tBodies[0].rows;
+	for(var i=0;i<row.length;i++){	
+		var cell = row[i].cells;
+		for(var j=0;j< cell.length;j++){	
+			if(cell[j].innerHTML == "money"){	
+				cell[j].style.color="red";
+			}
+		}				
+	}*/
+	/*18.	在一个表格中，将td里面的内容为空的加入一个”好”字。
+	var table = document.getElementsByTagName("table");	
+	var row=table[0].tBodies[0].rows;
+	for(var i=0;i<row.length;i++){	
+		var cell = row[i].cells;
+		for(var j=0;j< cell.length;j++){	
+			if(cell[j].innerHTML == ""){	
+				cell[j].innerHTML="好";
+			}
+		}				
+	}*/
+	/*19.	点击一个按钮，将指定的div显示的内容隐藏。再点击一下，隐藏的内容又显示出来啦。
+	var div = document.getElementsByTagName("div")[0];
+	var in1 = document.getElementById("in1");
+	var h = div.innerHTML;
+	
+	var op=0;
+	in1.onclick = function(){
+		if(op==0){	
+			op=1;
+			div.innerHTML = "";
+			div.style.background="";
+			div.style.border="3px solid green";
+		}else{
+			op=0;
+			div.innerHTML = h;
+			div.style.background="red";
+			div.style.border="";
+		
+		}		
+	}*/
+	/*20.	将input框value的值有张三的加上边框。	
+	var input = document.getElementsByTagName("input");
+	for(var i=0;i<input.length;i++){	
+		if(input[i].value == "张三"){	
+			input[i].style.border="2px solid red";
+		}
+	}*/
+	/*21.	页面有多个多选框，页面上有三个按钮：全选，全不选，反选。
+	
+	var input = document.getElementsByTagName("input");
+	for(var i=0;i<input.length;i++ ){
+		if(input[i].value == "全选"){	
+			input[i].onclick = function(){	
+				for(var j=0; j<input.length;j++){	
+					input[j].checked=true;
+				}
+			}
+		}else if(input[i].value == "全不选"){	
+			input[i].onclick = function(){	
+				for(var j=0; j<input.length;j++){	
+					input[j].checked=false;
+				}
+			}
+		}else{	
+			input[i].onclick = function(){	
+				for(var j=0; j<input.length;j++){	
+					input[j].checked=!input[j].checked;
+				}
+			}
+		
+		}
+	}		*/
+	
+
+
+/*<input type="checkbox" value="1" name="check" checked="true" />
+<input type="checkbox" value="1" name="check" />
+<input type="checkbox" value="1" name="check" checked="true" />
+<input type="checkbox" value="1" name="check" />
+
+<input type="button" value="全选">
+<input type="button" value="全不选">
+<input type="button" value="反选">
+<script>
+	var input=document.getElementsByTagName("input");
+	for (var i=0;i<input.length ; i++)
+	{
+		if (input[i].value=="全选")
+		{
+			input[i].onclick=function(){
+				for (var j=0;j<input.length ;j++ )
+				{
+					input[j].checked="true";
+				}
+			}
+		}else if(input[i].value=="全不选")
+		{
+				input[i].onclick=function(){
+					for (var j=0;j<input.length ;j++ ){
+					input[j].checked="";
+					}
+				}
+		}else if(input[i].value=="反选"){
+			input[i].onclick=function(){
+			
+				for (var j=0;j<input.length ;j++ )
+				{
+					if (input[j].checked=="")
+					{
+						input[j].checked="true";
+					}else{
+						input[j].checked="";
+					}
+				}
+			}
+		}
+
+	}
+*/
+</script>

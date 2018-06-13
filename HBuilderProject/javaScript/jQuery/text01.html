@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="UTF-8"/>
+	</head>
+	<style type="text/css">
+		/*div{
+			width:100%;
+			height:100px;
+			background:red;
+			margin-top:30px;
+			display: none;
+		}
+		#one{
+			width:200px;
+			height:200px;
+			background:red;
+			border:solid 1px red;
+		}
+		#one>.two{
+			width:100px;
+			height:100px;
+			margin:50px auto;
+			background:blue;
+		}
+		li{
+			width:130px;
+			height:50px;
+			float:left;
+			display: block;
+			background:gold;
+			list-style-type: none;
+		}
+		li>a{
+			height:50px;
+			width:130px;
+			display: block;
+			line-height: 50px;
+			text-align: center;
+			background: green;
+		}
+		li>ul{
+			width:90px;
+			height:150px;
+			display: none;
+		}
+		li>ul>li{
+			width:90px;
+			background:gold;
+			list-style-type: none;
+		}*/
+		
+	 	/*.dhe3{margin:0 auto;height:70px;position:relative;width:1600px;z-index:1000;background:red;}
+		.dhe3>ul{margin:0 auto;width:1250px;height:60px;line-height:60px;text-align:center;background:green;}
+		.dhe3>ul>li{list-style: none;width: 140px;height: 40px;float: left;font-size: 18px;}
+		.dhe3>ul>li>a{text-decoration: none ;color:#000;}
+		.dhe3>ul>li>a:hover{color:#9b9b9b;}
+		.dhe3>ul>li>ul{width:160px;background:#fff;display: none;z-index:100;margin-left:-20px;}
+		.dhe3>ul>li:hover>ul{display: block;list-style: none;padding-left:-20px;}
+		.dhe3>ul>li>ul>li{margin-left:-30px;border-bottom: solid gray 1px;}
+		.dhe3>ul>li>ul>li>a{color:#000;text-decoration: none;}
+		.dhe3>ul>li>ul>li>a:hover{color:#9b9b9b;}
+		.dhe3>ul>li>ul>li:hover{margin-left:-30px;}*/
+		.box{
+			width:200px;
+			height:200px;
+			background:red;
+		}
+		.test{
+			width:100px;
+			height:100px;
+			background:green;
+		}
+		.box2{
+			font-size: 30px;	
+			color:red;
+			width:150px;
+			height:150px;
+			line-height: 150px;
+			text-align: center;
+			background:blue;
+		}
+	</style>
+	<body>
+		<!--<button id="box1">显示框架</button><button id="box2">显示内容</button>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div id="one">
+			<div class="two"></div>
+		</div>
+		<div id="two" class="two">456</div>
+		<div class="two">789</div>-->
+<!--		<li>
+			<a href="">一级菜单</a>
+			<ul>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">一级菜单</a>
+			<ul>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">一级菜单</a>
+			<ul>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+			</ul>
+		</li>
+		<input type="text" />
+		<p>你输入的是：<span></span></p>-->
+<!--				
+		<div class="dhe3">
+				<ul>
+					<li><a href="#">首页</a>	</li>
+					<li><a href="#">产品中心	</a>
+						<ul>
+							<li><a href="#">产品展示1</a></li>
+							<li><a href="#">产品展示2</a></li>
+							<li><a href="#">产品展示3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">客户案例</a></li>
+					<li><a href="#">解决方案 </a></li>
+					<li><a href="#">新闻中心 </a>
+						<ul>
+							<li><a href="#">公司动态</a></li>
+							<li><a href="#">行业动态</a></li>
+							<li><a href="#">精彩专题</a></li>
+						</ul>
+					</li>
+					<li><a href="#">关于我们 </a></li>
+					<li><a href="#">加入我们 </a></li>
+					<li><a href="#">联系我们 </a></li>
+				</ul>
+			</div>-->
+			<div class="box">
+				<div class="test">
+					lovkjhj jhj 
+				</div>
+			</div>
+			<button>添加一个div</button>
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+<script>
+	$("button").click(function(){	
+//		$(".box>.test").toggleClass("box2")
+		if($(".test").hasClass("box2")){
+			$(".test").removeClass("box2");
+		}else{
+			$(".test").addClass("box2");
+		}
+	})
+//	$(".box").addClass("box2");//增加一个类
+//	$(".box").removeClass("box2");//删除一个类
+//	$(".box").on("click mouseover",".test",function(){//为一个元素绑定一个事件处理程序。
+//		console.log(123)
+//	})
+//	
+//	$(".box").delegate(".test","click mouseover",function(){//为一个元素绑定一个事件处理程序。
+//		console.log(789)
+//	})
+//	
+//	$(".test").bind("click mouseover",function(){//为一个元素绑定一个事件处理程序。
+//		console.log(456)
+//	})
+//	$(".box").on("click mouseover",".test",function(){
+//		console.log(123)
+//	})
+//	$(".box").on("dblclick",function(){
+//		console.log(456)
+//	})
+//	$(".box").off("click mouseover",".text")
+//	
+//	
+//	$("button").click(function(){//将匹配的元素插入到目标元素的最后面（译者注：内部插入）。
+//		$(".test").trigger("click");//根据绑定到匹配元素的给定的事件类型执行所有的处理程序和行为。
+//		$(".test").click();
+//		$("<div></div>",{
+//			class:"test"
+//		}).appendTo($(".box"))
+//	})
+	
+/*	$(".test").bind("click mouseover",function(){//为一个元素绑定一个事件处理程序。
+		console.log(123)
+	})*/
+/*	$(".test").click(function(){
+		console.log(123)
+	})
+	$(".test").mouseover(function(){
+		console.log(456)
+	})*/
+/*	$(".test").click(function(){
+		console.log(123)
+	})
+	$(".box").click(function(){
+		console.log(456)
+	})
+	*/
+//	$("a").mouseenter(function(){
+//		$("ul").show();
+//	})
+//	$("ul>li").mouseleave(function(){
+//		$("ul").hide();
+//	})
+//	
+//	$(function(){
+//		$("input").keyup(function(){
+//			$("p>span").text($(this).val());
+//		})
+//	})
+//	$(document.querySelector(".two")).css("background-color","yellow");//js转JP
+//	$(".two")[0].style.backgroundColor="yellow";//JP转js
+
+	
+//	$("a").mouseenter(function(){
+//		$("ul").show();
+//	})
+//	$("ul>li").mouseleave(function(){
+//		$("ul").hide();
+//	})
+//	
+//	$(".two").mouseenter(function(){
+//		console.log("1111111");
+//	})
+//	$(".two").mouseleave(function(){
+//		console.log("22222222");
+//	})
+//	$("#one").mouseover(function(){
+//		console.log("1111111");
+//	})
+//	$("#one").mouseout(function(){
+//		console.log("222222");
+//	})
+	/*
+	$("div:nth-of-type(2)").css("background-color","green");
+	$("div:nth-child(3)").css("background-color","red");
+	 $("#text");id唯一性，所选的第一个
+	 $(".text");选取的是网页中所有的class=test的内容
+	 $("div");选取的是文档中的所有div元素
+	 $("div:nth-of-type(1)");选取的是文档中的的第四个div元素
+	 $("[class=text]");选取的是属性class=test的元素
+	 $("div span");后代包括孙子
+	 $("div>span");后代不包括孙子
+	 $("div>span,p");并集选择器
+	 $("#test.test");交集选择器
+	 $("div+p");交集选择器
+	 
+	 */
+/*	var div=document.querySelectorAll("div");
+	document.getElementById("box1").onclick=function(){
+		for(var i=0;i<div.length;i++){
+			div[i].style.display="block";
+		}
+	}
+	document.getElementById("box2").onclick=function(){
+		for(var i=0;i<div.length;i++){
+			div[i].innerText="你好吗？";
+		}
+	}*/
+//  一个开关吧
+//	var cnt=0;
+//	$("#box1").click(function(){
+//		if(cnt==0){
+//			$("div").show();
+//			cnt++;
+//		}else{
+//			cnt=1;
+//			console.log("你好");
+//			$("div").show();
+//			cnt--; 
+//		}
+//	})
+//	$("#box2").click(function(){
+//		$("div").text("朱氏nbsp哦！");
+//	})
+</script>

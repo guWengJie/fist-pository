@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<video loop="loop">
+			<source src="../img/54.mp4"></source>
+		
+			<!--当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>-->
+		<audio loop="loop">
+			<source src="../img/Hoaprox - Ngẫu Hứng.mp3"></source>
+		</audio>
+		<button>stair</button>
+	</body>
+</html>
+<script>
+	var obj=document.querySelector("audio");
+	var cnt=0;
+	document.querySelector("button").onclick=function(){
+		if(cnt==0 && obj.paused==true){
+			obj.play();
+			cnt++;
+		}else{
+			obj.pause()
+			cnt--;
+		}
+	}
+</script>

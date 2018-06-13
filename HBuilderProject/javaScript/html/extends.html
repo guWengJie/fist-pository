@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+//	class Father{
+//		constructor(name,age){
+//			this.name=name;
+//			this.age=age;
+//		}
+//		say(){
+//			console.log("你会输的！");
+//		}
+//	}
+//	class Son extends Father{
+//		constructor(name,age,sex){
+//		super(name,age);
+//			this.sex=sex;
+//		}
+//	}	
+//	var son=new Son("顾文杰",20,"男");
+//	console.log(son.sex);
+//	
+//	继承
+//	function Father(){
+//		this.name="wdq";
+//	}
+//	function Son(age){
+//		this.age=age;
+//	}
+//	Son.prototype=new Father();//这一步完成继承
+//	var son = new Son(20);
+//	console.log(son.name);
+//	console.log(son.age);
+
+//	function Son(age){
+//		this.age=age;
+//	}
+//	var n = new Son(19);
+//	console.log(n.__proto__.constructor);//向当前对想的函数
+//	console.log(n.__proto__);//对象的原型属性
+//	console.log(n.__proto__==Son.prototype);//对象的原型属性
+//	console.log(Son.prototype);//对象的原型属性
+//	Son.prototype.sing=function(){
+//		
+//	}
+//	createPer.prototype.say=function(){
+//		
+//	}
+//	function createPer){
+//		this.name=name;
+//	}
+//	var o=new createper();
+//	var o1 =new createper();
+//	console.log(o.name);
+//	console.log(o1.name);
+	
+//  对象能够打印的属性不一定是自己的，如果一个属性在当前对象里没有
+//  它会顺着__proto__原型链一级一级的向上找，直到找到位置，如果找不到就报错，这就是原型链
+
+//	function grandFather(){
+//		this.faule="5套房子";
+//	}
+//	Father.prototype=new grandFather();
+//	function Father(){
+//		this.bake="5辆车";
+//	}
+//	Son.prototype=new Father();
+//	function Son(){
+//		this.moeny="5千万";
+//	}
+
+//	继承
+//	var a ={};
+//	var b = a;
+//	    b += a;
+//	console.log(Object.prototype.toString.call(a).slice(8,-1));
+//	console.log(b);
+//
+//	function idClass(o){//反回数据的类型，slice(8,-1)截取类型   辅助作用
+//		if(o===null) return "Null";
+//		if(o===undefined) return "Undefined";
+//		return Object.prototype.toString.call(o).slice(8,-1);//Object.prototype.toString.call(o)能直接返回对象的类属性，形如"[object class]"的字
+//		//符串，我们通过截取class，并能知道传入的对象是什么类型。
+//	}
+//	
+//	function deepClone(obj){
+//  var result,oClass=isClass(obj);
+//      //确定result的类型
+//  if(oClass==="Object"){
+//      result={};
+//  }else if(oClass==="Array"){
+//      result=[];
+//  }else{
+//      return obj;
+//  }
+//  for(key in obj){
+//      var copy=obj[key];//获取属性值
+//      if(isClass(copy)=="Object"){
+//          result[key]=arguments.callee(copy);//递归调用
+//      }else if(isClass(copy)=="Array"){
+//          result[key]=arguments.callee(copy);
+//      }else{
+//          result[key]=obj[key];
+//      }
+//  }
+//  return result;
+//}
+//	var d=deepClone(a);
+//	console.log(d);
+	
+//	var obj1=idClass(a);
+//	console.log(idClass(a));//object Object 取第八个到-1个   slice(8,-1)得Object
+//	function deepClone(obj){
+//		var result,oClass=isClass(obj);
+//		
+//		if(oClass==="Object"){
+//			result={};
+//		}else if(oClass==="Array"){
+//			resut={};
+//		}else{
+//			return obj;
+//		}
+//		
+//		for(key in obj){
+//			var copy=obi[key];
+//			if(isClass(copy)=="Obiect"){
+//				result[key]=arguments.callee(copy);
+//			}else if(isClass(copy)=="Array"){
+//				result[key]=arguments.callee(copy);
+//			}else{
+//				result[key]=obj[key];
+//			}
+//		}
+//		return result;
+//	}
+//	console.log(deepClone(obj1));
+	
+//	function fong(a,b){
+//		var sum2=a;
+//		var sum1=b;
+//		this.count=function(){
+//			return sum1+sum2;
+//		}
+//	}
+//	var a=new fong(12,12);
+//	console.log(a.count());
+
+//	function isType(obj){
+//		if(obj===null) return null;
+//		if(obj===undefined) return undefined;
+//		return Object.prototype.toString.call(obj).slice(8,-1);
+//	}
+//	
+//	function connCale(obj){
+//		var result;
+//		var objType=isType(obj);
+//		if(objType==="Array"){
+//			result=[];
+//		}else if(objType==="Object"){
+//			result={};
+//		}else{
+//			
+//		}
+//		
+//	}
+//	var a ={};
+//	var b=a;
+//		b.name="asdf";
+//	console.log(a.name);
+//		
+
+//	var str=new String("background-color");
+//	console.log(str.lastIndexOf("d"));
+//	console.log(str.indexOf("a"));
+//	console.log(str.charAt(5));
+//	console.log(str.concat(" zxcvkjk asdf"));
+//	console.log(str.substr(1,4));
+//	console.log(str.substring(1,4));
+//	var arr=str.split("a");
+//	console.log(arr.length);
+//	console.log(typeof arr);
+
+
+	/*var cnt=0;
+	for(var i=0; i<=str.length;i++){
+		for(var j=0; j<=str[i].length;j++){
+			if(str[i]==str[j]){
+				document.write(str[i]+",,,"+str[j]);
+			}
+		}
+		document.write("<br>");
+	}
+	console.log(cnt);
+	*/
+/*	var a="background-color"
+	function add(str){
+		var newStr=str.substring(0,str.indexOf("-"))+str.substr(str.indexOf("-")+1,1).toUpperCase()+str.substring(str.indexOf("-")+2,str.length);
+		return newStr
+	}
+	console.log(add(a))
+	*/
+	/*function repeatin(str){
+		var ren="没有相同";
+		for (var i=0;i<str.length;i++) {
+			if (str.indexOf(str[i])!=str.lastIndexOf(str[i])) {
+				ren="有相同";
+			}
+		}
+		return ren;
+	}
+	var a="hele";
+	console.log(repeatin(a))*/
+/*	
+	function mstr(str){
+		var max=0;
+		var sub=0;
+		for (var i=0;i<str.length;i++) {
+			var cnt=0;
+			for (var j=0;j<str.length;j++) {
+				if (str[i]==str[j]) {
+					cnt++;
+				}
+			}
+			if (cnt>max) {
+				max=cnt;
+				sub=i;
+			}		
+		}
+		console.log("字符是"+str.charAt(sub)+"重复了"+max+"次")
+	}
+	var a="2221111";
+	mstr(a);*/
+	
+/*	var a="font-siasdfze-color";
+	function qugang(str){
+		if(str.indexOf("-")!=str.lastIndexOf("-")){
+			var newStr=str.substring(0,str.indexOf("-"))+str.substr(str.indexOf("-")+1,1).toUpperCase()+str.substring(str.indexOf("-")
+			+2,str.lastIndexOf("-"))+str.substr(str.lastIndexOf("-")+1,1).toUpperCase()+str.substring(str.lastIndexOf("-")+2,str.lenght);
+		}
+		return newStr;
+	}
+	console.log(qugang(a));*/
+	
+	
+/*	//深度克隆
+	function deepClone(obj){
+	    var result,oClass=isClass(obj);
+	        //确定result的类型
+	    if(oClass==="Object"){
+	        result={};
+	    }else if(oClass==="Array"){
+	        result=[];
+	    }else{
+	        return obj;
+	    }
+	    for(key in obj){
+	        var copy=obj[key];
+	        if(isClass(copy)=="Object"){
+	            result[key]=arguments.callee(copy);//递归调用
+	        }else if(isClass(copy)=="Array"){
+	            result[key]=arguments.callee(copy);
+	        }else{
+	            result[key]=obj[key];
+	        }
+	    }
+	    return result;
+	}
+	//返回传递给他的任意对象的类
+	function isClass(o){
+	    if(o===null) return "Null";
+	    if(o===undefined) return "Undefined";
+	    return Object.prototype.toString.call(o).slice(8,-1);
+	}
+	*/
+	
+//	var str="indexindexindexiii";
+//	function repeat(str){	
+//		var max=0;
+//		var maxChar="";
+//		for(var i=0;i<str.length;i++){
+//			var cnt=0;
+//			for(var j=0; j<str.length;j++){
+//				if(str[i]==str[j]){
+//					cnt++;
+//				}
+//			}
+//			if(cnt>max){
+//				max=cnt;
+//				maxChar=str[i];
+//			}
+//		}
+//		return "字符是："+maxChar+"，重复了："+max; 
+//	}
+//	function repeat(str){
+//		var obj={};
+//		var maxChar="";
+//		var max=0;
+//		for(var i=0;i<str.length;i++){
+//			var cnt=0;
+//			for(var j=0;j<str.length;j++){
+//				if(str[i]==str[j]){
+//					cnt++;
+//					
+//				}
+//			}
+//			obj[str[i]]=cnt;
+//		}
+//		for(var i in obj){
+//			if(obj[i]>max){
+//				max=obj[i];
+//				maxChar=i;				
+//			}			
+//		}
+//		return "字符是："+maxChar+"，重复了："+max;  	
+//	}
+//	var str="zczzxczxcb";
+//	console.log(repeat(str));
+	
+	
+	
+/*	function toupp(str){
+		var newStr=str.substring(0,str.indexOf("-"))+str.substr(str.indexOf("-")+1,1).toUpperCase()+str.substring(str.indexOf("-")+2,str.length);
+		if(str.indexOf("-")!=-1){
+//			return arguments.callee(newStr);//都可以
+			return toupp(newStr);
+		}else{			
+			return newStr;
+		}
+	}
+	var str="border-left-top-color-red";
+	console.log(toupp(str));
+	*/
+//	function camelcase(str){
+//		var arr=str.split("-");
+//		var newStr=arr[0];
+//		for(var i=1;i<arr.length;i++){
+//			newStr+=arr[i].charAt(0).toUpperCase()+arr[i].substring(1,arr[i].length);
+//		}
+//		return newStr;
+//	}
+//	var str="border-left-color";
+//	console.log(camelcase(str));
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>

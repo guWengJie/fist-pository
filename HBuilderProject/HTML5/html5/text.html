@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			header{
+				height:100px;
+				background:tan;
+			}
+			nav{
+				height:50px;
+				background:red;
+			}
+			article{
+				height:400px;
+			}
+			article>aside:nth-child(1){
+				float:left;
+				background:green;
+				width: 20%;
+				height:100%;
+			}
+			article>aside:nth-of-type(2){
+				background:aqua;
+				height:100%;
+			}
+			article>aside:nth-of-type(2)>figure>figcaption{
+				float:left;
+			}
+			footer{
+				height:100px;
+				background:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<nav>
+			<progress id="te" value="30" min="0" max="100">30%</progress>
+		</nav>
+		<article>
+			<aside>
+				<details open>
+					<p>BMW</p>
+					<p>Ford</p>
+					<p>Volvo</p>
+					<p>BMW</p>
+				</details>
+			</aside>
+			<aside>
+				<figure>
+					<img src="../img/01.png"/>
+			    	<figcaption>PRC</figcaption>
+					<img src="../img/01.png"/>
+			    	<figcaption>PRC</figcaption>
+					<img src="../img/01.png"/>
+			    	<figcaption>PRC</figcaption>
+					<img src="../img/01.png"/>
+			    	<figcaption>PRC</figcaption>
+				</figure>
+			</aside>
+		</article>	
+
+		<footer>
+		</footer>
+		
+	</body>
+</html>
+<script>
+	cnt=30;
+	setInterval(function(){
+		cnt++;
+		if(cnt==100){
+			cnt=0;
+		}
+		te.value=cnt;
+	},100)
+	
+	
+</script>

@@ -1,0 +1,32 @@
+*{margin:0px;padding:0px;}
+.dhe5{width: 100%;height:700px;background: transparent;color:gray;}
+.dhe5 .bo1{width: 25%;height:700px;background:transparent;float:left;}
+.dhe5 .bo1 li{list-style: none;}
+.dhe5 .bo1>div{color:black;padding-left:40px;padding-top:-20px;font-size:30px;width:40px;height:50px;background: url(../img/rigister/logo.png) no-repeat;position: absolute;left:30px;top:30px;}
+.dhe5 .bo2{width:1000px;height:400px;background:transparent;margin:auto;text-align: center;background-size:1000px 400px;}
+.im{width: 300px;height:400px;position: absolute;}
+.dhe5 .bo2 .spn{display:block;font-size:15px;}
+.dhe5 .bo2>form{background:transparent;width:510px;margin: auto;}
+input{width:300px;height:30px;}
+input:nth-of-type(3){margin-left:5px;width:195px;}
+.sel02{width:100px;height:30px;color:gray;}
+p{display:block;width:150px;height:30px;font-size: 13px;text-align: left;padding-left:100px;}
+#sub{color:#fff;width:130px;height:50px;background:#fd9345;margin:auto;border-radius:25px;border:1px solid gold;}
+#sub:hover{color:#fd9345;background:#fff;}
+.dhe5 .bo3{width:400px;height:400px;background:transparent;float:right;}
+.dhe5 .bo3>ul{width:400px;height:50px;background:transparent;}
+.dhe5 .bo3>ul>li{width:65px;height:50px;float:left;list-style: none;}
+.dhe5 .bo3>ul>li:nth-of-type(1){background: url(../img/rigister/logo3.png) no-repeat;padding-left:30px;}
+.dhe5 .bo3>ul>li:nth-of-type(2){background: url(../img/rigister/mail.png) no-repeat;padding-left:30px;}
+.dhe5 .bo3>ul>li:nth-of-type(3){padding-left:10px;}
+.dhe5 .bo3>ul>li:nth-of-type(4){padding-left:30px;padding-rightt:30px;}
+.dhe5 .bo3>ul>li .sel01{width: 90px ;height: 30px;margin-top:4px;border:none;color:gray;font-size: 16px;}
+.dhe5 .bo3>ul>li>a{color:gray;text-align: center;line-height: 40px;text-decoration: none;}
+.dhe5 .bo3>ul>li>a:hover{color:gainsboro;}
+
+.dhe5 #tel{width:180px;height:30px;}
+.dhe5 #getNum{width:80px;height:30px;margin-right:10px;}
+.dhe5 #getNum01{width:30px;height:30px;border:0px;background:transparent;}
+.dhe5 #yzm{width:180px;height:30px;}
+.dhe5 #checkNum{width:70px;height:30px;margin-right:10px;}
+.dhe5 #checkNum01{width:40px;height:30px;border:0px;background:transparent;}

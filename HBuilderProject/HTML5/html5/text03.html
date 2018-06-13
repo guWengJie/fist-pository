@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#can{ 
+				background:#87c700;
+            }
+		</style>
+	</head>
+	<body>
+     	<canvas id="can" width="800" height="800"></canvas>
+	</body>
+</html>
+<script>
+	var canvas = document.querySelector("#can");
+    var ctx=canvas.getContext("2d");
+    function randColor(a,b){
+    	return Math.round(Math.random()*(b-a));
+    }
+    
+    for(var i=0; i<10 ;i++){
+    	cxt.beginPath();
+    	cxt.sstyle
+		cxt.arc(200,200,100,0,Math.PI*360);
+		cxt.closePath();
+    } 
+    
+    
+/*    	ctx.save();//方法保存当前图像状态的一份拷贝。
+		ctx.rotate(45*Math.PI/180);
+		ctx.font="40px 楷体";
+		ctx.fillText("Hello World",100,100);
+		ctx.stroke();//方法绘制当前路径。
+		ctx.rotate(-45*Math.PI/180);
+		ctx.font="10px 楷体";
+		ctx.fillText("Hello body",100,150);*/
+
+
+</script>

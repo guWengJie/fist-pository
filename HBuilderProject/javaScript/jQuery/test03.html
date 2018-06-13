@@ -1,0 +1,327 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			width: 100px;
+			height:100px;
+			background: red;
+			position:relative;
+			/*display: none;*/
+		}
+	</style>
+	<body>
+		<button>click</button>
+		<div></div>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	$(function(){
+		$("button").click(function(){
+			
+			$("div").animate({
+				left:300,
+				borderRadius:"50%"
+			})
+//			$("div").fadeTo(1000,0.2);
+//			$("div").fadeToggle(3000);
+//			$("div").fadeOut(1111);
+//			$("div").fadeIn(1111,0.4);
+//			$("div").slideToggle();
+//			$("div").slideUp();
+//			$("div").slideDown();
+//			$("div").toggle(1000);
+//			$("div").show(1000,function(){
+//				$("div").hide(1000");
+//			});
+//			$("div").hide(1000,function(){
+//				$("div").show(1000);
+//			});
+		})
+	})
+</script>-->
+
+
+
+
+<!--
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		/*div{
+			width:560px;
+			height:210px;
+			background: #000000;
+			border:3px solid #0f0;
+		}
+		div>ul{
+			width: 520px;
+			height:50px;
+			margin:0;
+			background: green;
+			list-style-type: none;
+		}
+		div>ul>li{
+			width:130px;
+			display: block;
+			float:left;
+		}
+		div>ul>li>a{
+			text-decoration: none;
+			text-align: center;
+			line-height: 50px;
+		}
+		div>ul>li>ul{
+			list-style-type: none;
+			width:520px;
+			margin-left:-40px;
+			line-height: 40px;
+			background: red;
+		}div>ul>li>ul{
+			width:130px;
+			display:none;
+		}
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#box{
+			width:300px;
+			height:200px;
+			margin:0;
+			font-size: 30px;
+			list-style: none;
+			text-align: center;
+			background:red;
+		}
+		#box>li{
+			background: green;
+			height:50px;
+		}
+		#box>li>span{
+			width:100px;
+			height:20px;
+		}
+		#box>li>ul{
+			display:none;
+			list-style: none;
+			background:gray;
+			height:200px;
+		}
+		#box>li>ul>li{
+			list-style: none;
+			height:60px;
+			background:blue;
+		}*/
+		
+	</style>
+	<body>
+		<!--<div>
+			<ul>
+				<li>
+					<a href="#">一级菜单</a>
+					<ul>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">一级菜单</a>
+					<ul>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">一级菜单</a>
+					<ul>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">一级菜单</a>
+					<ul>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+						<li>二级菜单</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<ul id="box">
+			<li>
+				<span>社会论坛</span>
+				<ul>
+					<li>社会论坛1</li>
+					<li>社会论坛2</li>
+					<li>社会论坛3</li>
+					<li>社会论坛4</li>
+				</ul>
+			</li>
+			<li>
+				<span>今日头条</span>
+				<ul>
+					<li>今日头条1</li>
+					<li>今日头条2</li>
+					<li>今日头条3</li>
+					<li>今日头条4</li>
+				</ul>
+			</li>
+			<li>
+				<span>最新资讯</span>
+				<ul>
+					<li>最新资讯1</li>
+					<li>最新资讯2</li>
+					<li>最新资讯3</li>
+					<li>最新资讯4</li>
+				</ul>
+			</li>
+			<li>
+				<span>腾讯快报</span>
+				<ul>
+					<li>腾讯快报1</li>
+					<li>腾讯快报2</li>
+					<li>腾讯快报3</li>
+					<li>腾讯快报4</li>
+				</ul>
+			</li>
+		</ul>
+		
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	$(function(){
+		/*$("div>ul>li").mouseover(function(){
+			$(this).children("ul").show();
+		}).mouseout(function(){
+			$(this).children("ul").hide();
+		})*/
+		/*$("div>ul>li").mouseover(function(){
+			$(this).children("ul").stop().slideDown();
+		}).mouseout(function(){
+			$(this).children("ul").stop().slideUp();
+		})*/
+	
+		$("#box>li>span").click(function(){
+				$(this).next().slideToggle();
+				$(this).parent().siblings().find("ul").slideUp();
+		})
+//		.mouseout(function(){
+//			$(this).children("ul").stop().slideUp();
+//		})
+	})
+</script>
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			nav>ul{
+				background: green;
+				width: 200px;
+			}
+			nav>ul>li{
+				font-size: 30px;
+				text-align: center;
+			}
+			nav>ul>li>ul{
+				background: yellow;
+				height: 150px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">第一菜单</a>
+					<ul>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+					</ul>
+				</li>
+				
+				<li>
+					<a href="#">第一菜单</a>
+					<ul>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+					</ul>
+				</li>
+				
+				<li>
+					<a href="#">第一菜单</a>
+					<ul>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+					</ul>
+				</li>
+				
+				<li>
+					<a href="#">第一菜单</a>
+					<ul>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+						<li>第二菜单</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.4.js" ></script>
+<script>
+	$(function(){
+		$("nav>ul>li>a").click(function(){
+			console.log($(this).parent())
+			$(this).next().toggle(1000);
+			$(this).parent().siblings().find("ul").slideUp();
+		})
+		/*$("nav>ul>li").mouseenter(function(){
+			$(this).children("ul").slideDown();
+		}).mouseleave(function(){
+			$(this).children("ul").slideUp();
+		})*/
+		/*$("button").click(function(){
+			//$("div").fadeToggle(1000);
+			$("div").animate({
+				left:100,
+			})
+			//$("div").slideToggle(1000);
+			//$("div").toggle(1000);
+		})*/
+	})
+</script>
+

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+//	var arr=[1,5,8,6,11,21,30];
+//	console.log(arr.sort());//数组从小到大排序
+//	console.log(arr.reverse());//反转数组
+//	console.log(arr.indexOf(6));//:在数组中，查找指定内容内容
+//	console.log(arr.shift());//;删除并返回数组的第一个开头内容
+//	console.log(arr.pop());//删除并返回最后一个内容
+//	console.log(arr.unshift("asd"));//向数组开头追加一个元素并返回新的数组长度
+//	console.log(arr.push("asd"));//向数组末尾追加一个元素并返回新的数组长度；
+//	console.log(arr.concat(["res","asdf","xz",4,1]));//；
+//	console.log(arr.splice(1,4));//；
+//	console.log(arr.slice(1,4));//；
+//	console.log(arr.join(""));//；
+//	console.log(arr.includes(17));//
+//	console.log(arr.forEach(function(a,b,c){
+//		return a;
+//	}));
+//	console.log(arr.filter(function(a,b,c){
+//		if(a>3){
+//			return a;
+//		}
+//	}));//
+//	console.log(arr);
+	
+	
+/*  出现次数最多的
+    function fun(arr){
+		var max=0;
+		var maxChar="";
+		for(var i=0;i<arr.length;i++){
+			var cnt=0;
+			for(var j=0;j<arr.length;j++){
+				if(arr[i]==arr[j]){
+					cnt++;
+				}
+			}
+			if(cnt>max){
+				max=cnt;
+				maxChar=arr[i];
+			}
+		}
+		return maxChar+","+max
+	}*/
+	
+/*  去掉重复值
+function repeat(arr){
+		var arr1=[];
+		var arr2=[];
+		for (var i = 0; i < arr.length; i++) {
+			arr1[arr[i]]="0";
+		}      
+		for(var i in arr1){
+			arr2.push(i);
+		}      
+		return arr2;
+	}    
+	var arr=[1,5,8,1,6,5,8,1,5,8];
+	console.log(repeat(arr));	
+*/
+
+/*	数组排序
+	function sortSort(arr){
+		for (var i = 0; i < arr.length; i++) {
+			for(var j = 0; j < arr.length; j++){
+				if(arr[i]<=arr[j]){
+					var newArr=arr[j];
+					arr[j]=arr[i];
+					arr[i]=newArr;
+				}
+			}
+		}      
+		return arr;
+	}    
+	var arr=[1,25,8,11,6,5,8,31,5,8];
+	var str=sortSort(arr);	
+	console.log(sortSort(arr));	
+	console.log(str.reverse());	*/
+		
+/*  去掉重复值
+    function repeat(arr){
+		for (var i = 0; i < arr.length; i++) {
+			for(var j = 0; j < arr.length; j++){
+				if(arr.indexOf(arr[j])!=arr.lastIndexOf(arr[j])){
+					arr.splice(arr.lastIndexOf(arr[j]),1)
+				}
+			}
+		}      
+		return arr;
+	}  
+*/
+
+/*  去掉重复值
+    function repeat(arr){
+		var newArr=[];
+		var cnt=0;
+		for(var i=0;i<arr.length;i++){
+			var bool=false;
+			for(var j=0;j<newArr.length;j++){
+				if(arr[i]==newArr[j]){
+					bool=true;
+				}
+			}
+			if(bool==false){
+				newArr[cnt++]=arr[i];
+			}
+		}
+		return newArr;
+	}
+	var arr=[1,25,8,8,5,5,8,5,8,5,8,8,11,6,5,8,31,5,8];
+	console.log(repeat(arr));
+	*/
+	
+/*  去掉重复值
+	var arr=[1,25,8,8,5,5,8,5,8,5,8,8,11,6,5,8,31,5,8,31];
+		for (var i = 0; i < arr.length; i++) {
+			for(var j = 0; j < arr.length; j++){
+				if(arr.indexOf(arr[j])!=arr.lastIndexOf(arr[j])){
+					console.log(arr.splice(arr.lastIndexOf(arr[j]),1));
+				}
+			}
+		}    
+		console.log(arr);*/
+	/*
+	 1.定义一个新的数组，
+	 2.遍历这个数组
+	 3.判断这个数组，有就加，没有就pass
+	 
+	Array.prototype.repeat01=function(){
+		var result=[];
+		for(var i=0;i<this.length;i++){
+			if(result.indexOf(this[i])==-1){
+				result.push(this[i])
+			}
+		}
+		return result;
+	}*/
+	/*
+	1.直接遍历当前数组，可以锁定当前内容 
+	2.直接判断当前内容在数组里面的位置是否一样
+	3.如果一样，说明只有一个，反之删除当前内容
+	
+	Array.prototype.repeat02=function(){
+		for(var i=0;i<this.length;i++){
+			if(this.indexOf(this[i])!=this.lastIndexOf(this[i])){
+				this.splice(i,1);
+				i--;//保证没有漏过的内容
+			}
+		}
+		return this;
+	}*/
+	/*
+	1.先排序，排序之后相同的内容紧挨着的 
+	2.遍历数组全一个和后一个进行比较
+	3.如果一样，删除当前内容
+	
+	Array.prototype.repeat03=function(){
+		this.sort();
+		for(var i=0;i<this.length;i++){
+			if(this[i]==this[i+1]){
+				this.splice(i,1);
+				i--;//保证没有漏过的内容
+			}
+		}
+		return this;
+	}
+	var arr=[1,25,8,8,5,5,8,5,8,5,8,8,11,6,5,8,31,5,8,31,31,31];
+	console.log(arr.repeat01());	
+	console.log(arr.repeat02());	
+	console.log(arr.repeat03());*/	
+	
+	/*
+	 外循环遍历  指定当前内容
+	 内循环 走一圈 大于当前内容，就在到后面去
+	 */
+
+/*	Array.prototype.Bubble=function(){
+		for(var i=0;i<this.length;i++){
+			for(var j=0;j<=this.length;j++){
+				if(this[i]<this[j]){//<升序    >是降序
+					var a=this[i];
+					this[i]=this[j];
+					this[j]=a;
+				}
+			}
+		}
+		return this;
+	}*/
+//	Array.prototype.sort01=function(){
+//		this.sort();
+//		var newArr=[];
+//		for(var i=0;i<this.length;i++){
+//			if(this[i]>9){
+//				newArr+=this[i];
+//				this.splice(i,1);
+//				i--;
+//			}
+//		}
+//		return this.concat(newArr);
+//	}
+//	var arr=[1,25,8,5,8,11,6,5,8,31];
+//	console.log(arr.sort01());	
+	
+	
+//	console.log(parseInt(Math.random()*14+16));		
+		
+	/*var Arr=["跑路费","我怕热","执行力","广安市"];
+	console.log(arr[Math.round(Math.random()*3)]);*/
+//	/*最大公约数*/
+//	function max(a,b){
+//		var minvalue=a>b?b:a;
+//		for(var i=minvalue;i>0;i--){
+//			if(a%i==0 && b%i==0) return i;
+//		}
+//	}
+//	console.log(max(14,12));
+//	/*最小公倍数*/
+//	function min(a,b){
+//		var maxValue=a>b?a:b;
+//		for(var i=maxValue;i>=maxValue;i++){
+//			if(i%a==0 && i%b==0) return i;
+//		}
+//	}
+//	console.log(min(6,8));
+	
+/*	function max(sun1,sun2){//最小公倍数
+		for (var i=Math.max(sun1,sun2); i>0; i--) {
+			if(sun1%i==0 && sun2%i==0){
+				return i;
+			}			
+		}		
+	}
+	function min(sun1,sun2){//最大公约数
+		for (var i=Math.min(sun1,sun2); i>0; i++) {
+			if(i%sun1==0 && i%sun2==0){
+				return i;
+			}			
+		}		
+	}
+	console.log(max(4,3));
+	console.log(min(4,3));*/
+	
+//	var newDate=new Date();
+//	console.log(newDate);
+//	console.log(newDate.getFullYear());
+//	console.log(newDate.getMonth());
+//	console.log(newDate.getDate());
+//	console.log(newDate.getHours());
+//	console.log(newDate.getMinutes());
+//	console.log(newDate.getSeconds());
+//	console.log(newDate.getMilliseconds());
+//	console.log(newDate.getDay());	
+//	console.log(newDate.getFullYear()+"年"+newDate.getMonth()+"月"+newDate.getDate()
+//	+"日"+newDate.getHours()+"时"+newDate.getMinutes()+"分"+newDate.getSeconds()+"秒");
+//	console.log(newDate.getTime());	
+
+	function offsetime(n){
+		var secondTime=new Date();
+		var offtime=n*24*60*60*1000;
+		var time=secondTime+offtime;//n天后的时间
+		var dat=new Date(time);
+		return dat;
+	}	
+	console.log(offsetime(3));
+	
+</script>

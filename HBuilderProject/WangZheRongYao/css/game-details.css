@@ -1,0 +1,67 @@
+*{margin: 0px;padding: 0px;}
+#gaDet{width: 100%;height:140px;background: transparent;position: relative;top:-542px;}
+#gaDet .hero{width:1700px;height:132px;background: transparent;margin: auto;}
+#gaDet .hero .hero01{width:1100px;height:132px;overflow: hidden;margin: auto;left: 400px;background: #000000;}
+#gaDet .hero .hero01 ul{width:700px;height:122px;background: url(../游戏资料/背.jpg);float: left;padding-top:50px;}
+#gaDet .hero .hero01 ul>li{width: 76px;height:76px;list-style: none;float: left;}
+#gaDet .hero .hero01 ul>li:hover{cursor:pointer;}
+#gaDet .hero .hero01 ul>li:nth-of-type(1){width: 224px;}
+#gaDet .hero .hero01 p{width:700px;height:20px;background:transparent;float: left;padding-top:10px;position: relative;top:-165px;color:whitesmoke;}
+#gaDet .hero .hero01 .hero02{width:400px;height:132px;margin: auto;float: left;}
+
+#data{width:100%;background: url(../游戏资料/beijing.jpg);background-size: 100% 100%;position: relative;top:-550px;}
+#data .dat{width:1700px; margin: auto;padding-top: 30px;}
+#data .dat .da{width:1150px;margin:auto;margin-top:50px;height:35px;background: url(../游戏资料/fangz.jpg) no-repeat;color: slategray;padding-left: 30px;}
+#data .dat .da>a{color: slategray;}
+#data .dat .da01{width:1180px;height:auto;margin:auto;}
+#data .dat .da01 .head{width:1180px;height:50px;margin-top:20px;background:url(../游戏资料/tou.jpg) no-repeat;padding-top:5px;padding-left:30px;font-weight: 800;font-size: 20px;}
+#data .dat .da01>ul{width:1150px;height:30px;background:transparent;list-style: none;color:grey;}
+#data .dat .da01>ul>li{width:383px;height:27px;background:transparent;float: left;text-align: center;line-height: 30px;}
+#data .dat .da01>ul>li:hover{cursor:pointer;}
+.datalist{border-bottom:#4169e1 solid 3px;color:#4169e1;}
+
+#data .dat .da01 .list01{width:1150px;background:transparent;position: relative;}
+#data .dat .da01 .list01>div{width:100%;background: transparent;display:none;color:grey;top:30px;}
+#data .dat .da01 .list01>div:nth-of-type(1){display:block;}
+#data .dat .da01 .list01>div>div{width:100%;height:50px;background: white;color:grey;margin-bottom: 30px;}
+#data .dat .da01 .list01>div:nth-of-type(1)>div .dao01{background:transparent;width: 60px;height:110px;background: #4169E1;float: left;text-align: center;color:white;border-radius:5px ;}
+#data .dat .da01 .list01>div:nth-of-type(1)>div input{margin-left: 60px;width: 15px;height:15px;}
+#data .dat .da01 .list01>div:nth-of-type(1)>div #in01{margin-left: 20px;margin-top: 25px;}
+#data .dat .da01 .list01>div:nth-of-type(1)>div #in02{width: 220px;height: 40px;border:1px solid darkgray;background: url(../游戏资料/sous.png) no-repeat;background-position: right;}
+
+#data .dat .da01 .list01>div:nth-of-type(1) .dao02>div{width:100%;background: url(../游戏资料/beijing.jpg);padding-top:20px;background-size: 100% 100%;display: none;position: absolute;margin-top: 30px;border:1px solid gainsboro;border-top: #d4dae6 solid 0px;}
+#data .dat .da01 .list01>div:nth-of-type(1) .dao02>div:nth-of-type(5){display: block;}
+.dao02 a{width:100px;height:130px;display: block;float:left;text-decoration: none;text-align: center;color:gray;margin-left: 10px;}
+.dao02 img{width:80px;height:80px;margin-left: 2px;border-radius:20px 0px;border:2px solid dodgerblue;}
+
+#data .dat .da01 .list01>div:nth-of-type(2) input{margin-left: 60px;width: 15px;height:15px;}
+#data .dat .da01 .list01>div:nth-of-type(2) #in01{margin-left: 20px;margin-top: 60px;}
+#data .dat .da01 .list01>div:nth-of-type(2) #in02{width: 220px;height: 40px;border:1px solid darkgray;background: url(../游戏资料/sous.png) no-repeat;background-position: right;}
+#data .dat .da01 .list01>div:nth-of-type(2) .dao02{width:100%;height:300px;margin:auto;background:transparent;}
+#data .dat .da01 .list01>div:nth-of-type(2) .dao02>div{width:100%;display: none;position: absolute;margin-top: 30px;}
+#data .dat .da01 .list01>div:nth-of-type(2) .dao02>div:nth-of-type(1){display: block;}
+
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg{width:1200px;height: 450px;margin:auto;background:transparent;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgLeft{width:550px;background:transparent;float: left;margin: 20px;border-right: 1px solid gray;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgLeft>ul{width:100%;list-style: none;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgLeft>ul>li{float: left;margin: 20px;width:80px;height:80px;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgLeft>ul>li:hover{cursor:pointer;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgLeft>ul>li>a{text-decoration: none;color:gray;text-align: center;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgLeft>ul>li>a>img{width:80px;height:80px;border-radius:20px 0px;border:2px solid #68C6DE;}
+/*#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgLeft>ul>li:nth-of-type(1)>a>img{border:2px solid #68C6DE;}*/
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgRight{width:500px;height: 400px;background:transparent;float: left;margin: 20px;/*border: dashed 2px #68C6DE;*/}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgRight>a{position: absolute;font-size: 14px;display: none;width:500px;height:280px;text-decoration: none;color:black;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgRight>a>p:nth-of-type(1){color:green;text-indent: 20px;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgRight>a>p:nth-of-type(2){color:gray;text-indent: 20px;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgRight>a>p:nth-of-type(3){text-indent: 20px;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgRight>a:nth-of-type(1){display: block;}
+#data .dat .da01 .list01>div:nth-of-type(3) .aaImg .imgRight>a>img{width:100%;height:100%;}
+.Ahover01{border:2px solid greenyellow;}
+.Ahover02{color:green;}
+.Ahover03{border:2px solid green;}
+
+
+
+
+
+

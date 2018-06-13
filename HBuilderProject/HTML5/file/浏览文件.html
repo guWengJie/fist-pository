@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file" name="tu" id="tu" multiple="multiple"/>
+		<button>点击浏览</button>
+		<ul>
+			
+		</ul>
+	</body>
+</html>
+<script>
+	
+	document.querySelector("button").onclick=function(){
+		var File=document.getElementById("tu").files[0];
+		var reader=new FileReader();
+		reader.readAsDataURL(File);
+		reader.readAsText(File,"text.text");
+		
+		/*reader.onload=function(){
+			var img=document.createElement("img");
+				img.src=this.result;
+				document.querySelector("ul").appendChild(img);
+		}*/
+	}
+
+</script>

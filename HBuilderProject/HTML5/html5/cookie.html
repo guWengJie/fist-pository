@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script>
+/*	for (var i=0;i<1000;i++) {
+		$.cookie("userName"+i,i);//添加cookie，但是有限制
+//		$.removeCookie("userName"+i,i);//删除cookie
+	}*/
+	
+	$.cookie("userName","gwj",{expires:7 ,path:"/"})
+//	for (var i=0;i<1000;i++) {
+//		$.storage("userName"+i,i);//添加cookie，但是有限制
+//	}
+	$.localStorage.setItem("userName01","456");
+	$.localStorage.getItem("userName02","456");
+	$.sessionStorage.setItem("userName","123");
+</script>

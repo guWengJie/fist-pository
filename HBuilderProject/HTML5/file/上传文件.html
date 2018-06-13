@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script src="../js/jquery-1.4.js"></script>
+<script>
+	var form=new FormData();
+		form.append("userName","gwj");
+		form.append("userPass","asdfs");
+/*		$.ajax({
+			url:"form.jsp",
+			type:"POST",
+			data : form,
+			processData : false,
+			contentType : false
+		});
+		*/
+		
+	var xhr=new XMLHttpRequest();
+		xhr.open("POST","form.jsp");
+		xhr.send(form);
+</script>

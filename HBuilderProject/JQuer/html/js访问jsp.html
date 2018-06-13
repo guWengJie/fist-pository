@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<ol style="list-style: none;"></ol>
+	</body>
+</html>
+<script type="text/javascript">
+//	AJAK的核心XMLHttpRequest
+//open(a,b,c);规定请求的类型、URL 以及是否异步处理请求。
+	//a:method：请求的类型；GET 或 POST 
+	//b:url：文件在服务器上的位置 
+	//C:async：true（异步）或 false（同步） 
+//send();将请求发送到服务器。
+//onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。 
+//readyState 存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+//
+//0: 请求未初始化 
+//1: 服务器连接已建立 
+//2: 请求已接收 
+//3: 请求处理中 
+//4: 请求已完成，且响应已就绪 
+// 
+//status 200: "OK"
+//
+//404: 未找到页面
+ 
+
+	var XHP;
+	if(window.XMLHttpRequest){//1.判断浏览器是否可以解析AJAK文件
+		XHP=new XMLHttpRequest();
+	}else{
+		XHP=new ActiveXObject("MIcrosoft.XMLHTTP");//IE浏览器的核心
+	}
+	
+	XHP.open("get","http://localhost:8080/JSP/new_file.jsp?userName=guWenJie&userPass=123456",true);//跨域处理，jsonp
+//	XHP.open("get","http://localhost:8080/JSP/new_file.jsp",true);//跨域处理，同源策略
+//	XHP.open("get","nont.json",true); 没有跨域
+	XHP.send();
+	XHP.onreadystatechange=function(){
+		if(XHP.readyState==4 && XHP.status==200){
+//			document.querySelector("ol").innerText=XHP.responseText;
+			console.log(typeof JSON.parse(XHP.responseText))
+//			document.querySelector("ol").innerText=XHP.responseText;
+			/*
+			var result=XHP.responseText;
+			var objJson=JSON.parse(result);
+			objJson.forEach(function(tt){
+				var li=document.createElement("li");
+					li.innerText=tt.userName+"=="+tt.password;
+					document.querySelector("ol").appendChild(li);
+			})*/
+		}
+	}
+</script>
