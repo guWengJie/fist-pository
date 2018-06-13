@@ -1,8 +1,0 @@
-*{padding: 0px;margin: 0px;}
-#weiBu{width: 100%;height: 300px;background: url(../王者/head/s.png);background-size:100% 300px;}
-#weiBu .bom{width:1700px;margin: auto; }
-#weiBu .bom-bom01{width:100%;height:80px;background: #f9f9f9;}
-#weiBu .bom-bom01>div{width:1700px;height:80px;margin: auto; border-bottom: gray solid 1px;}
-#weiBu .bom .bom-bom02{height:220px;margin: auto; font-size: 12px;}
-#weiBu .bom .bom-bom02>div{width:50%;height:220px;padding-top:15px ; background:transparent;float:left;}
-#weiBu .bom .bom-bom02>div>a{text-decoration: none;color:gray;}
